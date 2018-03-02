@@ -11,6 +11,8 @@ class RedList {
     
     init() {
         self.animals = PlistReader.getRedList()
+        shuffle()
+        updateAnserOrder()
     }
     
     func getAnimal(with index: Int) -> Animal {
@@ -29,14 +31,53 @@ class RedList {
                 animals[i + 1] = copyArr[i]
             }
         }
+        updateAnserOrder()
+    }
+    
+    func updateAnserOrder() {
+        for i in 0 ..< animals.count {
+            let animal = animals[i]
+            animal.answerOrder = i + 1
+        } 
+    }
+    
+    func sortByCorrectOrder() {
+        animals.sort { (animal1, animal2) -> Bool in
+            return animal1.correctOrder < animal2.correctOrder
+        }
+    }
+    
+    func sortByAnswerOrder() {
+        animals.sort { (animal1, animal2) -> Bool in
+            return animal1.answerOrder < animal2.answerOrder
+        }
+    }
+    
+    func shuffle() {
+        var index = animals.count
+        while index > 1 {
+            let newIndex = Int(arc4random_uniform(UInt32(index)))
+            index = index - 1
+            if index != newIndex {
+                swap(&animals[index], &animals[newIndex])
+            }
+        }
     }
     
 }
 
-struct Animal {
-    var order: Int
+class Animal {
+    var correctOrder: Int
+    var answerOrder: Int
     var name: String
     var image: UIImage
+    
+    init(correctOrder: Int, answerOrder: Int, name: String, image: UIImage) {
+        self.correctOrder = correctOrder
+        self.answerOrder = answerOrder
+        self.name = name
+        self.image = image
+    }
 }
 
 extension Array {
@@ -48,3 +89,4 @@ extension Array {
         return copyArr
     }
 }
+

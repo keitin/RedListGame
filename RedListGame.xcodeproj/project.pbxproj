@@ -38,6 +38,10 @@
 		323C31F62048219E00493C73 /* PlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F52048219E00493C73 /* PlistReader.swift */; };
 		323C31F920483BB500493C73 /* SelectUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F820483BB500493C73 /* SelectUserView.swift */; };
 		323C31FB20483D8A00493C73 /* Participants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31FA20483D8A00493C73 /* Participants.swift */; };
+		327BB58F204924BF0033216C /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB58E204924BF0033216C /* ScoreViewController.swift */; };
+		327BB593204927E90033216C /* ScoreCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB591204927E90033216C /* ScoreCardCell.swift */; };
+		327BB594204927E90033216C /* ScoreCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB592204927E90033216C /* ScoreCardCell.xib */; };
+		327BB596204929600033216C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB595204929600033216C /* UITableView+Extension.swift */; };
 		32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6995F20490E3200122F16 /* UIView+Extension.swift */; };
 		32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6996120490F9000122F16 /* UIViewController+Extension.swift */; };
 		32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F699632049192A00122F16 /* UIStackView+Extension.swift */; };
@@ -102,6 +106,10 @@
 		323C31F52048219E00493C73 /* PlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReader.swift; sourceTree = "<group>"; };
 		323C31F820483BB500493C73 /* SelectUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserView.swift; sourceTree = "<group>"; };
 		323C31FA20483D8A00493C73 /* Participants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participants.swift; sourceTree = "<group>"; };
+		327BB58E204924BF0033216C /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		327BB591204927E90033216C /* ScoreCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardCell.swift; sourceTree = "<group>"; };
+		327BB592204927E90033216C /* ScoreCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCardCell.xib; sourceTree = "<group>"; };
+		327BB595204929600033216C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		32F6995F20490E3200122F16 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		32F6996120490F9000122F16 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		32F699632049192A00122F16 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -208,6 +216,7 @@
 				32F6995F20490E3200122F16 /* UIView+Extension.swift */,
 				32F6996120490F9000122F16 /* UIViewController+Extension.swift */,
 				32F699632049192A00122F16 /* UIStackView+Extension.swift */,
+				327BB595204929600033216C /* UITableView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -215,9 +224,8 @@
 		323C31CA2047FF1E00493C73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				323C31C52047FDE700493C73 /* CardsViewController.swift */,
-				323C31F820483BB500493C73 /* SelectUserView.swift */,
-				323C31F72048395500493C73 /* CardCell */,
+				327BB58D2049248C0033216C /* Cards */,
+				327BB590204924D00033216C /* Score */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -261,6 +269,26 @@
 				323C31CC2048019000493C73 /* CardCell.xib */,
 			);
 			name = CardCell;
+			sourceTree = "<group>";
+		};
+		327BB58D2049248C0033216C /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				323C31C52047FDE700493C73 /* CardsViewController.swift */,
+				323C31F820483BB500493C73 /* SelectUserView.swift */,
+				323C31F72048395500493C73 /* CardCell */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
+		327BB590204924D00033216C /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				327BB58E204924BF0033216C /* ScoreViewController.swift */,
+				327BB591204927E90033216C /* ScoreCardCell.swift */,
+				327BB592204927E90033216C /* ScoreCardCell.xib */,
+			);
+			name = Score;
 			sourceTree = "<group>";
 		};
 		32F6996720491AE000122F16 /* Views */ = {
@@ -413,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327BB594204927E90033216C /* ScoreCardCell.xib in Resources */,
 				323C31EB20481AB700493C73 /* ciconia.png in Resources */,
 				323C31E320481AB700493C73 /* macrochelys.png in Resources */,
 				323C319E2047F29300493C73 /* LaunchScreen.storyboard in Resources */,
@@ -601,12 +630,15 @@
 				32F6996620491AB300122F16 /* BannerMessageView.swift in Sources */,
 				323C31F920483BB500493C73 /* SelectUserView.swift in Sources */,
 				32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */,
+				327BB58F204924BF0033216C /* ScoreViewController.swift in Sources */,
 				323C31C82047FF0900493C73 /* UIApplication+Extension.swift in Sources */,
 				323C31F62048219E00493C73 /* PlistReader.swift in Sources */,
+				327BB593204927E90033216C /* ScoreCardCell.swift in Sources */,
 				323C31942047F29300493C73 /* AppDelegate.swift in Sources */,
 				323C31FB20483D8A00493C73 /* Participants.swift in Sources */,
 				32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */,
 				323C31CD2048019000493C73 /* CardCell.swift in Sources */,
+				327BB596204929600033216C /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

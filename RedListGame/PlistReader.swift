@@ -37,13 +37,10 @@ class PlistReader {
                 fatalError("can not cast order to Int")
             }
             
-            let animal = Animal(order: order, name: name, image: image)
+            let animal = Animal(correctOrder: order, answerOrder: 0, name: name, image: image)
             animals.append(animal)
         }
         
-        animals.sort { (animal1, animal2) -> Bool in
-            return animal1.order < animal2.order
-        }
         return animals
     }
     

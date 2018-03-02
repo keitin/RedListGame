@@ -40,7 +40,15 @@ class CardsViewController: UIViewController {
             target: self, action: #selector(CardsViewController.handleLongGesture(gesture:))
         )
         collectionView.addGestureRecognizer(longPressGesture)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        redList.sortByAnswerOrder()
+        
+        let toScoreButton = UIBarButtonItem(title: "採点する", style: .done, target: self, action: #selector(CardsViewController.didTapToScoreButton(sender:)))
+        navigationItem.rightBarButtonItem = toScoreButton
     }
     
     func handleLongGesture(gesture: UILongPressGestureRecognizer) {
@@ -66,6 +74,11 @@ class CardsViewController: UIViewController {
         }
         
         isSelectedUser = false
+    }
+    
+    func didTapToScoreButton(sender: UIBarButtonItem) {
+        let scoreViewController = ScoreViewController(redList: redList)
+        navigationController?.pushViewController(scoreViewController, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
