@@ -1,0 +1,6 @@
+framework module Pods_RedListGameUITests {
+  umbrella header "Pods-RedListGameUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

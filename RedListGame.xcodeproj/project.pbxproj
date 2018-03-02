@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3162A7CAA0BCD6141BBA3D33 /* Pods_RedListGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD65168454325B304066A74 /* Pods_RedListGameTests.framework */; };
+		323C31942047F29300493C73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31932047F29300493C73 /* AppDelegate.swift */; };
+		323C319B2047F29300493C73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 323C319A2047F29300493C73 /* Assets.xcassets */; };
+		323C319E2047F29300493C73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323C319C2047F29300493C73 /* LaunchScreen.storyboard */; };
+		323C31A92047F29400493C73 /* RedListGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31A82047F29400493C73 /* RedListGameTests.swift */; };
+		323C31B42047F29400493C73 /* RedListGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31B32047F29400493C73 /* RedListGameUITests.swift */; };
+		323C31C62047FDE700493C73 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31C52047FDE700493C73 /* CardsViewController.swift */; };
+		323C31C82047FF0900493C73 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31C72047FF0900493C73 /* UIApplication+Extension.swift */; };
+		323C31CD2048019000493C73 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31CB2048019000493C73 /* CardCell.swift */; };
+		323C31CE2048019000493C73 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C31CC2048019000493C73 /* CardCell.xib */; };
+		323C31D0204801C500493C73 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31CF204801C500493C73 /* UICollectionView+Extension.swift */; };
+		323C31E020481AB700493C73 /* rhinoceros.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D120481AB700493C73 /* rhinoceros.png */; };
+		323C31E120481AB700493C73 /* bison.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D220481AB700493C73 /* bison.png */; };
+		323C31E220481AB700493C73 /* camelus.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D320481AB700493C73 /* camelus.png */; };
+		323C31E320481AB700493C73 /* macrochelys.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D420481AB700493C73 /* macrochelys.png */; };
+		323C31E420481AB700493C73 /* panthera.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D520481AB700493C73 /* panthera.png */; };
+		323C31E520481AB700493C73 /* pongo.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D620481AB700493C73 /* pongo.png */; };
+		323C31E620481AB700493C73 /* pentalagus.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D720481AB700493C73 /* pentalagus.png */; };
+		323C31E720481AB700493C73 /* gorilla.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D820481AB700493C73 /* gorilla.png */; };
+		323C31E820481AB700493C73 /* giraffa.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D920481AB700493C73 /* giraffa.png */; };
+		323C31E920481AB700493C73 /* mola.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DA20481AB700493C73 /* mola.png */; };
+		323C31EA20481AB700493C73 /* choeropsis.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DB20481AB700493C73 /* choeropsis.png */; };
+		323C31EB20481AB700493C73 /* ciconia.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DC20481AB700493C73 /* ciconia.png */; };
+		323C31EC20481AB700493C73 /* psephotus.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DD20481AB700493C73 /* psephotus.png */; };
+		323C31ED20481AB700493C73 /* balaenoptera.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DE20481AB700493C73 /* balaenoptera.png */; };
+		323C31EE20481AB700493C73 /* anguilla.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DF20481AB700493C73 /* anguilla.png */; };
+		323C31F120481AD700493C73 /* RedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F020481AD700493C73 /* RedList.swift */; };
+		323C31F420481C8400493C73 /* RedList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 323C31F320481C8400493C73 /* RedList.plist */; };
+		323C31F62048219E00493C73 /* PlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F52048219E00493C73 /* PlistReader.swift */; };
+		323C31F920483BB500493C73 /* SelectUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F820483BB500493C73 /* SelectUserView.swift */; };
+		323C31FB20483D8A00493C73 /* Participants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31FA20483D8A00493C73 /* Participants.swift */; };
+		32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6995F20490E3200122F16 /* UIView+Extension.swift */; };
+		32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6996120490F9000122F16 /* UIViewController+Extension.swift */; };
+		32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F699632049192A00122F16 /* UIStackView+Extension.swift */; };
+		32F6996620491AB300122F16 /* BannerMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6996520491AB300122F16 /* BannerMessageView.swift */; };
+		40046507BF8F46AAA1E6844D /* Pods_RedListGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B75E63D2254CAB1289410CC /* Pods_RedListGameUITests.framework */; };
+		BA1D8D22AB53D3D16E678871 /* Pods_RedListGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F0EF7D1CFFAEBEEF864C32 /* Pods_RedListGame.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		323C31A52047F29400493C73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 323C31882047F29300493C73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 323C318F2047F29300493C73;
+			remoteInfo = RedListGame;
+		};
+		323C31B02047F29400493C73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 323C31882047F29300493C73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 323C318F2047F29300493C73;
+			remoteInfo = RedListGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C32194251CDA3ADDE34CFD9 /* Pods-RedListGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedListGameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedListGameTests/Pods-RedListGameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2AAF1F288B9A7DA9434DADCA /* Pods-RedListGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedListGameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedListGameTests/Pods-RedListGameTests.release.xcconfig"; sourceTree = "<group>"; };
+		323C31902047F29300493C73 /* RedListGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedListGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		323C31932047F29300493C73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		323C319A2047F29300493C73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		323C319D2047F29300493C73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		323C319F2047F29300493C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		323C31A42047F29400493C73 /* RedListGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedListGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		323C31A82047F29400493C73 /* RedListGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedListGameTests.swift; sourceTree = "<group>"; };
+		323C31AA2047F29400493C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		323C31AF2047F29400493C73 /* RedListGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedListGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		323C31B32047F29400493C73 /* RedListGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedListGameUITests.swift; sourceTree = "<group>"; };
+		323C31B52047F29400493C73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		323C31C52047FDE700493C73 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		323C31C72047FF0900493C73 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		323C31CB2048019000493C73 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		323C31CC2048019000493C73 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		323C31CF204801C500493C73 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		323C31D120481AB700493C73 /* rhinoceros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rhinoceros.png; sourceTree = "<group>"; };
+		323C31D220481AB700493C73 /* bison.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bison.png; sourceTree = "<group>"; };
+		323C31D320481AB700493C73 /* camelus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camelus.png; sourceTree = "<group>"; };
+		323C31D420481AB700493C73 /* macrochelys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macrochelys.png; sourceTree = "<group>"; };
+		323C31D520481AB700493C73 /* panthera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panthera.png; sourceTree = "<group>"; };
+		323C31D620481AB700493C73 /* pongo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pongo.png; sourceTree = "<group>"; };
+		323C31D720481AB700493C73 /* pentalagus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pentalagus.png; sourceTree = "<group>"; };
+		323C31D820481AB700493C73 /* gorilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gorilla.png; sourceTree = "<group>"; };
+		323C31D920481AB700493C73 /* giraffa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffa.png; sourceTree = "<group>"; };
+		323C31DA20481AB700493C73 /* mola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mola.png; sourceTree = "<group>"; };
+		323C31DB20481AB700493C73 /* choeropsis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choeropsis.png; sourceTree = "<group>"; };
+		323C31DC20481AB700493C73 /* ciconia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ciconia.png; sourceTree = "<group>"; };
+		323C31DD20481AB700493C73 /* psephotus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psephotus.png; sourceTree = "<group>"; };
+		323C31DE20481AB700493C73 /* balaenoptera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balaenoptera.png; sourceTree = "<group>"; };
+		323C31DF20481AB700493C73 /* anguilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anguilla.png; sourceTree = "<group>"; };
+		323C31F020481AD700493C73 /* RedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedList.swift; sourceTree = "<group>"; };
+		323C31F320481C8400493C73 /* RedList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RedList.plist; sourceTree = "<group>"; };
+		323C31F52048219E00493C73 /* PlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReader.swift; sourceTree = "<group>"; };
+		323C31F820483BB500493C73 /* SelectUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserView.swift; sourceTree = "<group>"; };
+		323C31FA20483D8A00493C73 /* Participants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participants.swift; sourceTree = "<group>"; };
+		32F6995F20490E3200122F16 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		32F6996120490F9000122F16 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		32F699632049192A00122F16 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		32F6996520491AB300122F16 /* BannerMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerMessageView.swift; sourceTree = "<group>"; };
+		35F0EF7D1CFFAEBEEF864C32 /* Pods_RedListGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedListGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD65168454325B304066A74 /* Pods_RedListGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedListGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B8E548EEF641CB1D4FE94A /* Pods-RedListGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedListGame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedListGame/Pods-RedListGame.debug.xcconfig"; sourceTree = "<group>"; };
+		7B75E63D2254CAB1289410CC /* Pods_RedListGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedListGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F2A4979E347117A32561DD9 /* Pods-RedListGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedListGameUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RedListGameUITests/Pods-RedListGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A126C0FA57916992A8DFC0F2 /* Pods-RedListGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedListGameUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedListGameUITests/Pods-RedListGameUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AB7B1B3A4B17B09DBCEACED9 /* Pods-RedListGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedListGame.release.xcconfig"; path = "Pods/Target Support Files/Pods-RedListGame/Pods-RedListGame.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		323C318D2047F29300493C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA1D8D22AB53D3D16E678871 /* Pods_RedListGame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		323C31A12047F29400493C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3162A7CAA0BCD6141BBA3D33 /* Pods_RedListGameTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		323C31AC2047F29400493C73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40046507BF8F46AAA1E6844D /* Pods_RedListGameUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		323C31872047F29300493C73 = {
+			isa = PBXGroup;
+			children = (
+				323C31922047F29300493C73 /* RedListGame */,
+				323C31A72047F29400493C73 /* RedListGameTests */,
+				323C31B22047F29400493C73 /* RedListGameUITests */,
+				323C31912047F29300493C73 /* Products */,
+				9FC35C141037B3A5C137DFBB /* Pods */,
+				990B63071930B493B2963650 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		323C31912047F29300493C73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				323C31902047F29300493C73 /* RedListGame.app */,
+				323C31A42047F29400493C73 /* RedListGameTests.xctest */,
+				323C31AF2047F29400493C73 /* RedListGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		323C31922047F29300493C73 /* RedListGame */ = {
+			isa = PBXGroup;
+			children = (
+				323C31932047F29300493C73 /* AppDelegate.swift */,
+				32F6996720491AE000122F16 /* Views */,
+				323C31F220481ADB00493C73 /* Models */,
+				323C31CA2047FF1E00493C73 /* Controllers */,
+				323C31C92047FF1400493C73 /* Extensions */,
+				323C31EF20481ABE00493C73 /* images */,
+				323C319A2047F29300493C73 /* Assets.xcassets */,
+				323C319C2047F29300493C73 /* LaunchScreen.storyboard */,
+				323C319F2047F29300493C73 /* Info.plist */,
+				323C31F320481C8400493C73 /* RedList.plist */,
+			);
+			path = RedListGame;
+			sourceTree = "<group>";
+		};
+		323C31A72047F29400493C73 /* RedListGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				323C31A82047F29400493C73 /* RedListGameTests.swift */,
+				323C31AA2047F29400493C73 /* Info.plist */,
+			);
+			path = RedListGameTests;
+			sourceTree = "<group>";
+		};
+		323C31B22047F29400493C73 /* RedListGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				323C31B32047F29400493C73 /* RedListGameUITests.swift */,
+				323C31B52047F29400493C73 /* Info.plist */,
+			);
+			path = RedListGameUITests;
+			sourceTree = "<group>";
+		};
+		323C31C92047FF1400493C73 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				323C31CF204801C500493C73 /* UICollectionView+Extension.swift */,
+				323C31C72047FF0900493C73 /* UIApplication+Extension.swift */,
+				32F6995F20490E3200122F16 /* UIView+Extension.swift */,
+				32F6996120490F9000122F16 /* UIViewController+Extension.swift */,
+				32F699632049192A00122F16 /* UIStackView+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		323C31CA2047FF1E00493C73 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				323C31C52047FDE700493C73 /* CardsViewController.swift */,
+				323C31F820483BB500493C73 /* SelectUserView.swift */,
+				323C31F72048395500493C73 /* CardCell */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		323C31EF20481ABE00493C73 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				323C31D120481AB700493C73 /* rhinoceros.png */,
+				323C31D220481AB700493C73 /* bison.png */,
+				323C31D320481AB700493C73 /* camelus.png */,
+				323C31D420481AB700493C73 /* macrochelys.png */,
+				323C31D520481AB700493C73 /* panthera.png */,
+				323C31D620481AB700493C73 /* pongo.png */,
+				323C31D720481AB700493C73 /* pentalagus.png */,
+				323C31D820481AB700493C73 /* gorilla.png */,
+				323C31D920481AB700493C73 /* giraffa.png */,
+				323C31DA20481AB700493C73 /* mola.png */,
+				323C31DB20481AB700493C73 /* choeropsis.png */,
+				323C31DC20481AB700493C73 /* ciconia.png */,
+				323C31DD20481AB700493C73 /* psephotus.png */,
+				323C31DE20481AB700493C73 /* balaenoptera.png */,
+				323C31DF20481AB700493C73 /* anguilla.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		323C31F220481ADB00493C73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				323C31F020481AD700493C73 /* RedList.swift */,
+				323C31F52048219E00493C73 /* PlistReader.swift */,
+				323C31FA20483D8A00493C73 /* Participants.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		323C31F72048395500493C73 /* CardCell */ = {
+			isa = PBXGroup;
+			children = (
+				323C31CB2048019000493C73 /* CardCell.swift */,
+				323C31CC2048019000493C73 /* CardCell.xib */,
+			);
+			name = CardCell;
+			sourceTree = "<group>";
+		};
+		32F6996720491AE000122F16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				32F6996520491AB300122F16 /* BannerMessageView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		990B63071930B493B2963650 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35F0EF7D1CFFAEBEEF864C32 /* Pods_RedListGame.framework */,
+				4FD65168454325B304066A74 /* Pods_RedListGameTests.framework */,
+				7B75E63D2254CAB1289410CC /* Pods_RedListGameUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FC35C141037B3A5C137DFBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63B8E548EEF641CB1D4FE94A /* Pods-RedListGame.debug.xcconfig */,
+				AB7B1B3A4B17B09DBCEACED9 /* Pods-RedListGame.release.xcconfig */,
+				0C32194251CDA3ADDE34CFD9 /* Pods-RedListGameTests.debug.xcconfig */,
+				2AAF1F288B9A7DA9434DADCA /* Pods-RedListGameTests.release.xcconfig */,
+				8F2A4979E347117A32561DD9 /* Pods-RedListGameUITests.debug.xcconfig */,
+				A126C0FA57916992A8DFC0F2 /* Pods-RedListGameUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		323C318F2047F29300493C73 /* RedListGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 323C31B82047F29400493C73 /* Build configuration list for PBXNativeTarget "RedListGame" */;
+			buildPhases = (
+				07DE31A170CEA19D69072165 /* [CP] Check Pods Manifest.lock */,
+				323C318C2047F29300493C73 /* Sources */,
+				323C318D2047F29300493C73 /* Frameworks */,
+				323C318E2047F29300493C73 /* Resources */,
+				268FE1C81270A2BBB5113907 /* [CP] Embed Pods Frameworks */,
+				876B2C935574731E2EBCD3CE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedListGame;
+			productName = RedListGame;
+			productReference = 323C31902047F29300493C73 /* RedListGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		323C31A32047F29400493C73 /* RedListGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 323C31BB2047F29400493C73 /* Build configuration list for PBXNativeTarget "RedListGameTests" */;
+			buildPhases = (
+				F9DD80798FB040DA5E5B7BBC /* [CP] Check Pods Manifest.lock */,
+				323C31A02047F29400493C73 /* Sources */,
+				323C31A12047F29400493C73 /* Frameworks */,
+				323C31A22047F29400493C73 /* Resources */,
+				91A8921199A1F366BFE1668C /* [CP] Embed Pods Frameworks */,
+				AFF7AA0E27617A5E291B8258 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				323C31A62047F29400493C73 /* PBXTargetDependency */,
+			);
+			name = RedListGameTests;
+			productName = RedListGameTests;
+			productReference = 323C31A42047F29400493C73 /* RedListGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		323C31AE2047F29400493C73 /* RedListGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 323C31BE2047F29400493C73 /* Build configuration list for PBXNativeTarget "RedListGameUITests" */;
+			buildPhases = (
+				1E3C748A44CBBF9E1DBA37D3 /* [CP] Check Pods Manifest.lock */,
+				323C31AB2047F29400493C73 /* Sources */,
+				323C31AC2047F29400493C73 /* Frameworks */,
+				323C31AD2047F29400493C73 /* Resources */,
+				7BE2533853C931F80B3F8477 /* [CP] Embed Pods Frameworks */,
+				C59073B2DA2652EC82468902 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				323C31B12047F29400493C73 /* PBXTargetDependency */,
+			);
+			name = RedListGameUITests;
+			productName = RedListGameUITests;
+			productReference = 323C31AF2047F29400493C73 /* RedListGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		323C31882047F29300493C73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "matsushita keita";
+				TargetAttributes = {
+					323C318F2047F29300493C73 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8T5842463P;
+						ProvisioningStyle = Automatic;
+					};
+					323C31A32047F29400493C73 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = W2SEEKJW55;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 323C318F2047F29300493C73;
+					};
+					323C31AE2047F29400493C73 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = W2SEEKJW55;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 323C318F2047F29300493C73;
+					};
+				};
+			};
+			buildConfigurationList = 323C318B2047F29300493C73 /* Build configuration list for PBXProject "RedListGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 323C31872047F29300493C73;
+			productRefGroup = 323C31912047F29300493C73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				323C318F2047F29300493C73 /* RedListGame */,
+				323C31A32047F29400493C73 /* RedListGameTests */,
+				323C31AE2047F29400493C73 /* RedListGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		323C318E2047F29300493C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				323C31EB20481AB700493C73 /* ciconia.png in Resources */,
+				323C31E320481AB700493C73 /* macrochelys.png in Resources */,
+				323C319E2047F29300493C73 /* LaunchScreen.storyboard in Resources */,
+				323C31EA20481AB700493C73 /* choeropsis.png in Resources */,
+				323C31E820481AB700493C73 /* giraffa.png in Resources */,
+				323C31E420481AB700493C73 /* panthera.png in Resources */,
+				323C31E020481AB700493C73 /* rhinoceros.png in Resources */,
+				323C31E220481AB700493C73 /* camelus.png in Resources */,
+				323C31E920481AB700493C73 /* mola.png in Resources */,
+				323C31E520481AB700493C73 /* pongo.png in Resources */,
+				323C31CE2048019000493C73 /* CardCell.xib in Resources */,
+				323C31EC20481AB700493C73 /* psephotus.png in Resources */,
+				323C31F420481C8400493C73 /* RedList.plist in Resources */,
+				323C31EE20481AB700493C73 /* anguilla.png in Resources */,
+				323C31E120481AB700493C73 /* bison.png in Resources */,
+				323C31E720481AB700493C73 /* gorilla.png in Resources */,
+				323C31ED20481AB700493C73 /* balaenoptera.png in Resources */,
+				323C319B2047F29300493C73 /* Assets.xcassets in Resources */,
+				323C31E620481AB700493C73 /* pentalagus.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		323C31A22047F29400493C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		323C31AD2047F29400493C73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07DE31A170CEA19D69072165 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1E3C748A44CBBF9E1DBA37D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		268FE1C81270A2BBB5113907 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedListGame/Pods-RedListGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BE2533853C931F80B3F8477 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedListGameUITests/Pods-RedListGameUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		876B2C935574731E2EBCD3CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedListGame/Pods-RedListGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91A8921199A1F366BFE1668C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedListGameTests/Pods-RedListGameTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFF7AA0E27617A5E291B8258 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedListGameTests/Pods-RedListGameTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59073B2DA2652EC82468902 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RedListGameUITests/Pods-RedListGameUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9DD80798FB040DA5E5B7BBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		323C318C2047F29300493C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				323C31C62047FDE700493C73 /* CardsViewController.swift in Sources */,
+				32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */,
+				323C31F120481AD700493C73 /* RedList.swift in Sources */,
+				323C31D0204801C500493C73 /* UICollectionView+Extension.swift in Sources */,
+				32F6996620491AB300122F16 /* BannerMessageView.swift in Sources */,
+				323C31F920483BB500493C73 /* SelectUserView.swift in Sources */,
+				32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */,
+				323C31C82047FF0900493C73 /* UIApplication+Extension.swift in Sources */,
+				323C31F62048219E00493C73 /* PlistReader.swift in Sources */,
+				323C31942047F29300493C73 /* AppDelegate.swift in Sources */,
+				323C31FB20483D8A00493C73 /* Participants.swift in Sources */,
+				32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */,
+				323C31CD2048019000493C73 /* CardCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		323C31A02047F29400493C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				323C31A92047F29400493C73 /* RedListGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		323C31AB2047F29400493C73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				323C31B42047F29400493C73 /* RedListGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		323C31A62047F29400493C73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 323C318F2047F29300493C73 /* RedListGame */;
+			targetProxy = 323C31A52047F29400493C73 /* PBXContainerItemProxy */;
+		};
+		323C31B12047F29400493C73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 323C318F2047F29300493C73 /* RedListGame */;
+			targetProxy = 323C31B02047F29400493C73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		323C319C2047F29300493C73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				323C319D2047F29300493C73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		323C31B62047F29400493C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		323C31B72047F29400493C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		323C31B92047F29400493C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63B8E548EEF641CB1D4FE94A /* Pods-RedListGame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8T5842463P;
+				INFOPLIST_FILE = RedListGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.RedListGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		323C31BA2047F29400493C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB7B1B3A4B17B09DBCEACED9 /* Pods-RedListGame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8T5842463P;
+				INFOPLIST_FILE = RedListGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.RedListGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		323C31BC2047F29400493C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C32194251CDA3ADDE34CFD9 /* Pods-RedListGameTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W2SEEKJW55;
+				INFOPLIST_FILE = RedListGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.RedListGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedListGame.app/RedListGame";
+			};
+			name = Debug;
+		};
+		323C31BD2047F29400493C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AAF1F288B9A7DA9434DADCA /* Pods-RedListGameTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W2SEEKJW55;
+				INFOPLIST_FILE = RedListGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.RedListGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedListGame.app/RedListGame";
+			};
+			name = Release;
+		};
+		323C31BF2047F29400493C73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F2A4979E347117A32561DD9 /* Pods-RedListGameUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = W2SEEKJW55;
+				INFOPLIST_FILE = RedListGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.RedListGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RedListGame;
+			};
+			name = Debug;
+		};
+		323C31C02047F29400493C73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A126C0FA57916992A8DFC0F2 /* Pods-RedListGameUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = W2SEEKJW55;
+				INFOPLIST_FILE = RedListGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinoponchan.RedListGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = RedListGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		323C318B2047F29300493C73 /* Build configuration list for PBXProject "RedListGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323C31B62047F29400493C73 /* Debug */,
+				323C31B72047F29400493C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		323C31B82047F29400493C73 /* Build configuration list for PBXNativeTarget "RedListGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323C31B92047F29400493C73 /* Debug */,
+				323C31BA2047F29400493C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		323C31BB2047F29400493C73 /* Build configuration list for PBXNativeTarget "RedListGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323C31BC2047F29400493C73 /* Debug */,
+				323C31BD2047F29400493C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		323C31BE2047F29400493C73 /* Build configuration list for PBXNativeTarget "RedListGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323C31BF2047F29400493C73 /* Debug */,
+				323C31C02047F29400493C73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 323C31882047F29300493C73 /* Project object */;
+}
