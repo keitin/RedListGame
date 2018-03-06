@@ -42,6 +42,12 @@
 		327BB593204927E90033216C /* ScoreCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB591204927E90033216C /* ScoreCardCell.swift */; };
 		327BB594204927E90033216C /* ScoreCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB592204927E90033216C /* ScoreCardCell.xib */; };
 		327BB596204929600033216C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB595204929600033216C /* UITableView+Extension.swift */; };
+		327BB598204965000033216C /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB597204965000033216C /* Operation.swift */; };
+		327BB59A204CE8950033216C /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB599204CE8950033216C /* AnalysisViewController.swift */; };
+		327BB59E204E353E0033216C /* LineChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB59C204E353E0033216C /* LineChartCell.swift */; };
+		327BB59F204E353E0033216C /* LineChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB59D204E353E0033216C /* LineChartCell.xib */; };
+		327BB5A3204E435D0033216C /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5A1204E435D0033216C /* PieChartCell.swift */; };
+		327BB5A4204E435D0033216C /* PieChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5A2204E435D0033216C /* PieChartCell.xib */; };
 		32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6995F20490E3200122F16 /* UIView+Extension.swift */; };
 		32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6996120490F9000122F16 /* UIViewController+Extension.swift */; };
 		32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F699632049192A00122F16 /* UIStackView+Extension.swift */; };
@@ -110,6 +116,12 @@
 		327BB591204927E90033216C /* ScoreCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardCell.swift; sourceTree = "<group>"; };
 		327BB592204927E90033216C /* ScoreCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCardCell.xib; sourceTree = "<group>"; };
 		327BB595204929600033216C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		327BB597204965000033216C /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		327BB599204CE8950033216C /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
+		327BB59C204E353E0033216C /* LineChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartCell.swift; sourceTree = "<group>"; };
+		327BB59D204E353E0033216C /* LineChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineChartCell.xib; sourceTree = "<group>"; };
+		327BB5A1204E435D0033216C /* PieChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		327BB5A2204E435D0033216C /* PieChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieChartCell.xib; sourceTree = "<group>"; };
 		32F6995F20490E3200122F16 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		32F6996120490F9000122F16 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		32F699632049192A00122F16 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -226,6 +238,7 @@
 			children = (
 				327BB58D2049248C0033216C /* Cards */,
 				327BB590204924D00033216C /* Score */,
+				327BB59B204CE8AA0033216C /* Analysis */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +271,7 @@
 				323C31F020481AD700493C73 /* RedList.swift */,
 				323C31F52048219E00493C73 /* PlistReader.swift */,
 				323C31FA20483D8A00493C73 /* Participants.swift */,
+				327BB597204965000033216C /* Operation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -289,6 +303,34 @@
 				327BB592204927E90033216C /* ScoreCardCell.xib */,
 			);
 			name = Score;
+			sourceTree = "<group>";
+		};
+		327BB59B204CE8AA0033216C /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				327BB599204CE8950033216C /* AnalysisViewController.swift */,
+				327BB5A0204E35500033216C /* LineChartCell */,
+				327BB5A5204E43690033216C /* PieChart */,
+			);
+			name = Analysis;
+			sourceTree = "<group>";
+		};
+		327BB5A0204E35500033216C /* LineChartCell */ = {
+			isa = PBXGroup;
+			children = (
+				327BB59C204E353E0033216C /* LineChartCell.swift */,
+				327BB59D204E353E0033216C /* LineChartCell.xib */,
+			);
+			name = LineChartCell;
+			sourceTree = "<group>";
+		};
+		327BB5A5204E43690033216C /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5A1204E435D0033216C /* PieChartCell.swift */,
+				327BB5A2204E435D0033216C /* PieChartCell.xib */,
+			);
+			name = PieChart;
 			sourceTree = "<group>";
 		};
 		32F6996720491AE000122F16 /* Views */ = {
@@ -444,6 +486,7 @@
 				327BB594204927E90033216C /* ScoreCardCell.xib in Resources */,
 				323C31EB20481AB700493C73 /* ciconia.png in Resources */,
 				323C31E320481AB700493C73 /* macrochelys.png in Resources */,
+				327BB5A4204E435D0033216C /* PieChartCell.xib in Resources */,
 				323C319E2047F29300493C73 /* LaunchScreen.storyboard in Resources */,
 				323C31EA20481AB700493C73 /* choeropsis.png in Resources */,
 				323C31E820481AB700493C73 /* giraffa.png in Resources */,
@@ -451,6 +494,7 @@
 				323C31E020481AB700493C73 /* rhinoceros.png in Resources */,
 				323C31E220481AB700493C73 /* camelus.png in Resources */,
 				323C31E920481AB700493C73 /* mola.png in Resources */,
+				327BB59F204E353E0033216C /* LineChartCell.xib in Resources */,
 				323C31E520481AB700493C73 /* pongo.png in Resources */,
 				323C31CE2048019000493C73 /* CardCell.xib in Resources */,
 				323C31EC20481AB700493C73 /* psephotus.png in Resources */,
@@ -628,6 +672,8 @@
 				323C31F120481AD700493C73 /* RedList.swift in Sources */,
 				323C31D0204801C500493C73 /* UICollectionView+Extension.swift in Sources */,
 				32F6996620491AB300122F16 /* BannerMessageView.swift in Sources */,
+				327BB5A3204E435D0033216C /* PieChartCell.swift in Sources */,
+				327BB59E204E353E0033216C /* LineChartCell.swift in Sources */,
 				323C31F920483BB500493C73 /* SelectUserView.swift in Sources */,
 				32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */,
 				327BB58F204924BF0033216C /* ScoreViewController.swift in Sources */,
@@ -636,6 +682,8 @@
 				327BB593204927E90033216C /* ScoreCardCell.swift in Sources */,
 				323C31942047F29300493C73 /* AppDelegate.swift in Sources */,
 				323C31FB20483D8A00493C73 /* Participants.swift in Sources */,
+				327BB598204965000033216C /* Operation.swift in Sources */,
+				327BB59A204CE8950033216C /* AnalysisViewController.swift in Sources */,
 				32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */,
 				323C31CD2048019000493C73 /* CardCell.swift in Sources */,
 				327BB596204929600033216C /* UITableView+Extension.swift in Sources */,

@@ -19,6 +19,14 @@ class RedList {
         return animals[index]
     }
     
+    func calculateScore() -> Int {
+        var total = 0
+        for animal in animals {
+            total = total + abs(animal.answerOrder - animal.correctOrder)
+        }
+        return total
+    }
+    
     func move(fromIndex: Int, toIndex: Int) {
         var copyArr: [Animal] = animals.copy()
         animals[toIndex] = copyArr[fromIndex]
@@ -62,6 +70,17 @@ class RedList {
                 swap(&animals[index], &animals[newIndex])
             }
         }
+    }
+    
+    func copy() -> RedList {
+        let copyedRedList = RedList()
+        var newAnimals: [Animal] = []
+        for a in animals {
+            let animal = Animal(correctOrder: a.correctOrder, answerOrder: a.answerOrder, name: a.name, image: a.image)
+            newAnimals.append(animal)
+        }
+        copyedRedList.animals = newAnimals
+        return copyedRedList
     }
     
 }

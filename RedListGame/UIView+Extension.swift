@@ -27,6 +27,11 @@ extension UIView {
         leadingAnchor.constraint(equalTo: equalTo, constant: constatnt).isActive = true
     }
     
+    func trailing(equalTo: NSLayoutAnchor<NSLayoutXAxisAnchor>, constatnt: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        trailingAnchor.constraint(equalTo: equalTo, constant: constatnt).isActive = true
+    }
+    
     func top(equalTo: NSLayoutAnchor<NSLayoutYAxisAnchor>, constatnt: CGFloat) {
         translatesAutoresizingMaskIntoConstraints = false
         topAnchor.constraint(equalTo: equalTo, constant: constatnt).isActive = true

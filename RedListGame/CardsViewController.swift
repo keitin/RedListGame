@@ -8,13 +8,20 @@ class CardsViewController: UIViewController {
     fileprivate let numberOfCols: CGFloat = 5
     fileprivate let numberOfRows: CGFloat = 3
     fileprivate var selectUserView: SelectUserView!
+    fileprivate var selectedUser: User?
+    fileprivate var currentTime: Int = 0
+    fileprivate var timer: Timer!
     
     private let selectUserViewHeight: CGFloat = 50.0
     private var longPressGesture : UILongPressGestureRecognizer!
-    let participants = Participants(names: ["keita", "yo", "shio", "imamura"])
+    let participants = Participants(names: ["keita", "yo", "shio"])
+    
+    fileprivate var timeLine: TimeLine!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timeLine = TimeLine(users: participants.getUsers())
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -40,6 +47,12 @@ class CardsViewController: UIViewController {
             target: self, action: #selector(CardsViewController.handleLongGesture(gesture:))
         )
         collectionView.addGestureRecognizer(longPressGesture)
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+            self.currentTime = self.currentTime + 1
+            self.title = "時間： \(self.currentTime)"
+        })
+        timer.fire()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,7 +90,8 @@ class CardsViewController: UIViewController {
     }
     
     func didTapToScoreButton(sender: UIBarButtonItem) {
-        let scoreViewController = ScoreViewController(redList: redList)
+        timer.invalidate()
+        let scoreViewController = ScoreViewController(timeLine: timeLine)
         navigationController?.pushViewController(scoreViewController, animated: true)
     }
 
@@ -93,6 +107,7 @@ extension CardsViewController: SelectUserViewDelegate {
     func selectUserView(selectUserView: SelectUserView, didTapUserButton user: User) {
         print(user.name)
         isSelectedUser = true
+        selectedUser = user
     }
 }
 
@@ -121,6 +136,16 @@ extension CardsViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        if let user = selectedUser {
+            let targetAnimal = redList.getAnimal(with: sourceIndexPath.row)
+            let hand = Hand(animal: targetAnimal, fromId: sourceIndexPath.row, toId: destinationIndexPath.row)
+            let operation = Operation(user: user, time: currentTime, redList: redList.copy(), hand: hand)
+            timeLine.append(operation: operation)
+            print(operation)
+            print(targetAnimal.name)
+        }
+        
         redList.move(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
     

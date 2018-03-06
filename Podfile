@@ -6,7 +6,7 @@ target 'RedListGame' do
   use_frameworks!
 
   # Pods for RedListGame
-
+  pod 'Charts'
   target 'RedListGameTests' do
     inherit! :search_paths
     # Pods for testing
