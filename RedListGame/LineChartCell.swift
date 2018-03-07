@@ -13,11 +13,14 @@ class LineChartCell: UITableViewCell {
         addSubview(lineChartView)
         lineChartView.pinTo(superView: self, constant: 0)
         lineChartView.isUserInteractionEnabled = false
+        lineChartView.legend.enabled = false
     }
     
     func update(with timeLine: TimeLine) {
         self.timeLine = timeLine
         var entries: [BarChartDataEntry] = []
+        let initialEntry = BarChartDataEntry(x: 0, y: Double(timeLine.initialScore), data: User(id: Int.max, name: "start") as AnyObject)
+        entries.append(initialEntry)
         for operation in timeLine.operations {
             let time = Double(operation.time)
             let score = Double(operation.redList.calculateScore())

@@ -21,7 +21,7 @@ class CardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeLine = TimeLine(users: participants.getUsers())
+        timeLine = TimeLine(users: participants.getUsers(), initialScore: redList.calculateScore())
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -53,6 +53,8 @@ class CardsViewController: UIViewController {
             self.title = "時間： \(self.currentTime)"
         })
         timer.fire()
+        
+        print("score: \(redList.calculateScore())")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +84,7 @@ class CardsViewController: UIViewController {
             collectionView.endInteractiveMovement()
             collectionView.reloadData()
             selectUserView.clearSelectButtons()
+            print("score: \(redList.calculateScore())")
         default:
             collectionView.cancelInteractiveMovement()
         }
@@ -136,7 +139,7 @@ extension CardsViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
+        redList.move(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
         if let user = selectedUser {
             let targetAnimal = redList.getAnimal(with: sourceIndexPath.row)
             let hand = Hand(animal: targetAnimal, fromId: sourceIndexPath.row, toId: destinationIndexPath.row)
@@ -145,8 +148,6 @@ extension CardsViewController: UICollectionViewDelegate {
             print(operation)
             print(targetAnimal.name)
         }
-        
-        redList.move(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
     
 }

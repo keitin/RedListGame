@@ -22,4 +22,8 @@ class Participants {
 struct User {
     var id: Int
     var name: String
+    
+    func isEqual(user: User) -> Bool {
+        return self.id == user.id
+    }
 }

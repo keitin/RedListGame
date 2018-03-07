@@ -60,10 +60,22 @@ extension AnalysisViewController: UITableViewDataSource {
             let cell: LineChartCell = tableView.dequeueCell(indexPath: indexPath)
             cell.update(with: timeLine)
             return cell
-        default:
+        case .pieChart:
             let cell: PieChartCell = tableView.dequeueCell(indexPath: indexPath)
             cell.update(with: timeLine)
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let section = Section.init(rawValue: section) else {
+            fatalError("Invalid section number")
+        }
+        switch section {
+        case .lineChart:
+            return "スコアの推移"
+        case .pieChart:
+            return "発言回数"
         }
     }
 }
@@ -73,6 +85,6 @@ extension AnalysisViewController: UITableViewDataSource {
 
 extension AnalysisViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.height - statusBarHeight - navigationBarHeight
+        return tableView.frame.height - statusBarHeight
     }
 }

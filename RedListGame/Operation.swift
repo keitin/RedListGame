@@ -5,9 +5,11 @@ class TimeLine {
     var users: [User]
     var numberOfUsers: Int { return users.count }
     var numberOfOperations: Int { return operations.count }
+    var initialScore: Int
     
-    init(users: [User]) {
+    init(users: [User], initialScore: Int) {
         self.users = users
+        self.initialScore = initialScore
     }
     
     func append(operation: Operation) {
@@ -24,6 +26,32 @@ class TimeLine {
     
     func getCommentRate(user: User) -> Double {
         return Double(calculateNumberOfComments(user: user)) / Double(numberOfOperations) * 100
+    }
+    
+    func getNumberOfGoodComments(user: User) -> Int {
+        var count = 0
+        var prevScore = initialScore
+        for operation in operations {
+            let currScore = operation.redList.calculateScore()
+            if operation.user.isEqual(user: user) && currScore > prevScore {
+                count = count + 1
+            }
+            prevScore = currScore
+        }
+        return count
+    }
+    
+    func getNumberOfBadComments(user: User) -> Int {
+        var count = 0
+        var prevScore = initialScore
+        for operation in operations {
+            let currScore = operation.redList.calculateScore()
+            if operation.user.isEqual(user: user) && currScore <= prevScore {
+                count = count + 1
+            }
+            prevScore = currScore
+        }
+        return count
     }
     
     private func calculateNumberOfComments(user: User) -> Int {
