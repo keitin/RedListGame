@@ -7,10 +7,19 @@ class RedList {
         return animals.count
     }
     
+    var title: String?
+    var introduction: String?
+    var question: String?
+    var gameFlow: GameFlow!
+    
     private var animals: [Animal] = []
     
     init() {
-        self.animals = PlistReader.getRedList()
+        self.animals = PlistReader.getAnimals()
+        self.title = PlistReader.getTitle()
+        self.introduction = PlistReader.getIntroduction()
+        self.question = PlistReader.getQuestion()
+        self.gameFlow = PlistReader.getGameFlow()
         shuffle()
         updateAnserOrder()
     }
@@ -76,7 +85,7 @@ class RedList {
         let copyedRedList = RedList()
         var newAnimals: [Animal] = []
         for a in animals {
-            let animal = Animal(correctOrder: a.correctOrder, answerOrder: a.answerOrder, name: a.name, image: a.image)
+            let animal = Animal(correctOrder: a.correctOrder, answerOrder: a.answerOrder, name: a.name, image: a.image, hint: a.hint)
             newAnimals.append(animal)
         }
         copyedRedList.animals = newAnimals
@@ -90,13 +99,19 @@ class Animal {
     var answerOrder: Int
     var name: String
     var image: UIImage
+    var hint: String?
     
-    init(correctOrder: Int, answerOrder: Int, name: String, image: UIImage) {
+    init(correctOrder: Int, answerOrder: Int, name: String, image: UIImage, hint: String?) {
         self.correctOrder = correctOrder
         self.answerOrder = answerOrder
         self.name = name
         self.image = image
+        self.hint = hint
     }
+}
+
+class GameFlow {
+    var explanations: [String] = []
 }
 
 extension Array {

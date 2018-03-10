@@ -2,46 +2,76 @@ import UIKit
 
 class CardsViewController: UIViewController {
 
-    fileprivate var redList = RedList()
     fileprivate var collectionView: UICollectionView!
-    fileprivate var isSelectedUser: Bool = false
+    fileprivate let tableView = UITableView()
+    
+    fileprivate var redList = RedList()
     fileprivate let numberOfCols: CGFloat = 5
     fileprivate let numberOfRows: CGFloat = 3
-    fileprivate var selectUserView: SelectUserView!
     fileprivate var selectedUser: User?
     fileprivate var currentTime: Int = 0
     fileprivate var timer: Timer!
     
     private let selectUserViewHeight: CGFloat = 50.0
     private var longPressGesture : UILongPressGestureRecognizer!
-    let participants = Participants(names: ["keita", "yo", "shio"])
+    var participants: Participants
+    var setTime: Int
     
     fileprivate var timeLine: TimeLine!
+    
+    init(names: [String], setTime: Int) {
+        self.participants = Participants(names: names)
+        self.setTime = setTime
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    enum TableSection: Int {
+        case restTime
+        case playingUser
+        case users
+        
+        static let count = 3
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .red
+        
         timeLine = TimeLine(users: participants.getUsers(), initialScore: redList.calculateScore())
         
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 2.0
+        layout.minimumInteritemSpacing = 1.0
         
-        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-        let collectionViewHeight = view.frame.height - navigationBarHeight - selectUserViewHeight - statusBarHeight
-        collectionView.frame.size.height = collectionViewHeight
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.addSubview(collectionView)
+        collectionView.widthEqualTo(constant: view.frame.width * 3 / 4 - 1.0)
+        collectionView.top(equalTo: view.topAnchor, constatnt: 0)
+        collectionView.bottom(equalTo: view.bottomAnchor, constatnt: 0)
+        collectionView.leading(equalTo: view.leadingAnchor, constatnt: 0)
         collectionView.backgroundColor = .white
         collectionView.register(type: CardCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        let selectUserViewY = view.frame.height - selectUserViewHeight - navigationBarHeight - statusBarHeight
-        let frame = CGRect(x: 0, y: selectUserViewY, width: view.frame.width, height: selectUserViewHeight)
-        selectUserView = SelectUserView(frame: frame)
-        selectUserView.set(with: participants)
-        selectUserView.delegate = self
-        view.addSubview(selectUserView)
+        view.addSubview(tableView)
+        tableView.widthEqualTo(constant: view.frame.width * 1 / 4)
+        tableView.trailing(equalTo: view.trailingAnchor, constatnt: 0)
+        tableView.top(equalTo: view.topAnchor, constatnt: 0)
+        tableView.bottom(equalTo: view.bottomAnchor, constatnt: 0)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 90
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(type: UserNameCell.self)
+        tableView.register(type: RestTimeCell.self)
+        tableView.register(type: PlayingUserCell.self)
         
         longPressGesture = UILongPressGestureRecognizer(
             target: self, action: #selector(CardsViewController.handleLongGesture(gesture:))
@@ -51,6 +81,7 @@ class CardsViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
             self.currentTime = self.currentTime + 1
             self.title = "時間： \(self.currentTime)"
+            self.tableView.reloadData()
         })
         timer.fire()
         
@@ -73,7 +104,7 @@ class CardsViewController: UIViewController {
             guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
                 break
             }
-            if !isSelectedUser {
+            if selectedUser == nil ? true : false {
                 BannerMessageView().show(superView: self.view, with: "ユーザを選んでください")
                 return
             }
@@ -83,13 +114,10 @@ class CardsViewController: UIViewController {
         case UIGestureRecognizerState.ended:
             collectionView.endInteractiveMovement()
             collectionView.reloadData()
-            selectUserView.clearSelectButtons()
             print("score: \(redList.calculateScore())")
         default:
             collectionView.cancelInteractiveMovement()
         }
-        
-        isSelectedUser = false
     }
     
     func didTapToScoreButton(sender: UIBarButtonItem) {
@@ -101,16 +129,6 @@ class CardsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-}
-
-// MARK: UserSelectViewDelegate 
-
-extension CardsViewController: SelectUserViewDelegate {
-    func selectUserView(selectUserView: SelectUserView, didTapUserButton user: User) {
-        print(user.name)
-        isSelectedUser = true
-        selectedUser = user
     }
 }
 
@@ -148,6 +166,8 @@ extension CardsViewController: UICollectionViewDelegate {
             print(operation)
             print(targetAnimal.name)
         }
+        selectedUser = nil
+        tableView.reloadData()
     }
     
 }
@@ -162,4 +182,74 @@ extension CardsViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: height)
     }
     
+}
+
+// MARK: UITableViewDataSource
+
+extension CardsViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return TableSection.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let section = TableSection.init(rawValue: section) else {
+            fatalError("Invalid section")
+        }
+        switch section {
+        case .restTime:
+            return 1
+        case .playingUser:
+            return 1
+        case .users:
+            return timeLine.users.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let section = TableSection.init(rawValue: indexPath.section) else {
+            fatalError("Invalid section")
+        }
+        switch section {
+        case .restTime:
+            let cell: RestTimeCell = tableView.dequeueCell(indexPath: indexPath)
+            cell.update(with: setTime - currentTime)
+            return cell
+        case .playingUser:
+            let cell: PlayingUserCell = tableView.dequeueCell(indexPath: indexPath)
+            cell.update(with: selectedUser)
+            return cell
+        case .users:
+            let cell: UserNameCell = tableView.dequeueCell(indexPath: indexPath)
+            cell.update(with: timeLine.users[indexPath.row].name)
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let section = TableSection.init(rawValue: section) else {
+            fatalError("Invalid section")
+        }
+        switch section {
+        case .restTime:
+            return "残り時間"
+        case .playingUser:
+            return "操作中のユーザ"
+        case .users:
+            return "操作するユーザを選択"
+        }
+    }
+}
+
+extension CardsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = TableSection.init(rawValue: indexPath.section) else {
+            fatalError("Invalid section")
+        }
+        if section == .users {
+            selectedUser = timeLine.users[indexPath.row]
+            tableView.reloadData()
+        }
+    }
 }

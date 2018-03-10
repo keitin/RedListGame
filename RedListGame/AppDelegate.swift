@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         self.window?.backgroundColor = .white
-        UIApplication.setInitialVCWithNC(controller: CardsViewController(), title: "Cards")
+        UIApplication.setInitialVCWithNC(controller: SettingViewController(), title: "Setting")
         
         return true
     }

@@ -12,7 +12,6 @@ class LineChartCell: UITableViewCell {
         selectionStyle = .none
         addSubview(lineChartView)
         lineChartView.pinTo(superView: self, constant: 0)
-        lineChartView.isUserInteractionEnabled = false
         lineChartView.legend.enabled = false
     }
     

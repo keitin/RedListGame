@@ -6,12 +6,75 @@ class PlistReader {
     private static let redListFileName = "RedList"
     private static let redListExtension = "plist"
     
-    static func getRedList() -> [Animal] {
+    static func getTitle() -> String? {
         guard let path = Bundle.main.path(forResource: redListFileName, ofType: "plist") else {
             fatalError("can not find plist: \(redListFileName)")
         }
         
-        guard let dictArray = NSArray(contentsOfFile: path) else {
+        guard let dic = NSDictionary(contentsOfFile: path) else {
+            fatalError("can not create array from \(path)")
+        }
+        
+        return dic["gameTitle"] as? String
+    }
+    
+    static func getIntroduction() -> String? {
+        guard let path = Bundle.main.path(forResource: redListFileName, ofType: "plist") else {
+            fatalError("can not find plist: \(redListFileName)")
+        }
+        
+        guard let dic = NSDictionary(contentsOfFile: path) else {
+            fatalError("can not create array from \(path)")
+        }
+        
+        return dic["introduction"] as? String
+    }
+    
+    static func getQuestion() -> String? {
+        guard let path = Bundle.main.path(forResource: redListFileName, ofType: "plist") else {
+            fatalError("can not find plist: \(redListFileName)")
+        }
+        
+        guard let dic = NSDictionary(contentsOfFile: path) else {
+            fatalError("can not create array from \(path)")
+        }
+        
+        return dic["question"] as? String
+    }
+    
+    static func getGameFlow() -> GameFlow {
+        var gameFlow = GameFlow()
+        guard let path = Bundle.main.path(forResource: redListFileName, ofType: "plist") else {
+            fatalError("can not find plist: \(redListFileName)")
+        }
+        
+        guard let dic = NSDictionary(contentsOfFile: path) else {
+            fatalError("can not create array from \(path)")
+        }
+        
+        guard let array = dic["gameFlow"] as? NSArray else {
+            fatalError("can not create array from \(path)")
+        }
+        
+        for flow in array {
+            guard let f = flow as? String else {
+                fatalError()
+            }
+            gameFlow.explanations.append(f)
+        }
+        return gameFlow
+    }
+    
+    static func getAnimals() -> [Animal] {
+        guard let path = Bundle.main.path(forResource: redListFileName, ofType: "plist") else {
+            fatalError("can not find plist: \(redListFileName)")
+        }
+        
+        guard let dic = NSDictionary(contentsOfFile: path) else {
+            fatalError("can not create array from \(path)")
+        }
+        
+        guard let dictArray = dic["animals"] as? NSArray else {
             fatalError("can not create array from \(path)")
         }
         
@@ -37,7 +100,9 @@ class PlistReader {
                 fatalError("can not cast order to Int")
             }
             
-            let animal = Animal(correctOrder: order, answerOrder: 0, name: name, image: image)
+            let hint = dict["hint"] as? String
+            
+            let animal = Animal(correctOrder: order, answerOrder: 0, name: name, image: image, hint: hint)
             animals.append(animal)
         }
         

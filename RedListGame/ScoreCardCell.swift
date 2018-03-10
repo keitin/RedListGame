@@ -24,20 +24,20 @@ class ScoreCardCell: UITableViewCell {
         
         let itemWidth = (UIApplication.shared.keyWindow?.frame.width)! / numberOfItems
         
-        addSubview(animalNameLabel)
-        setCommonAutoLayout(view: animalNameLabel)
-        animalNameLabel.widthEqualTo(constant: itemWidth)
-        animalNameLabel.leading(equalTo: self.leadingAnchor, constatnt: itemMargin)
-        
         addSubview(correctLabel)
         setCommonAutoLayout(view: correctLabel)
         correctLabel.widthEqualTo(constant: itemWidth / 2.0)
-        correctLabel.leading(equalTo: animalNameLabel.trailingAnchor, constatnt: itemMargin)
+        correctLabel.leading(equalTo: self.leadingAnchor, constatnt: itemMargin)
+        
+        addSubview(animalNameLabel)
+        setCommonAutoLayout(view: animalNameLabel)
+        animalNameLabel.widthEqualTo(constant: itemWidth)
+        animalNameLabel.leading(equalTo: correctLabel.trailingAnchor, constatnt: itemMargin)
         
         addSubview(answerLabel)
         setCommonAutoLayout(view: answerLabel)
         answerLabel.widthEqualTo(constant: itemWidth)
-        answerLabel.leading(equalTo: correctLabel.trailingAnchor, constatnt: itemMargin)
+        answerLabel.leading(equalTo: animalNameLabel.trailingAnchor, constatnt: itemMargin)
         
         addSubview(diffLabel)
         diffLabel.textColor = .red
@@ -64,7 +64,7 @@ class ScoreCardCell: UITableViewCell {
         correctLabel.text = "正解: \(animal.correctOrder)"
         answerLabel.text = "あなたの解答: \(animal.answerOrder)"
         diffLabel.text = "差: \(abs(animal.correctOrder - animal.answerOrder))"
-        memoLabel.text = "卵生　1回/2300"
+        memoLabel.text = animal.hint ?? ""
     }
     
     func setCommonAutoLayout(view: UILabel) {

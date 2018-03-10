@@ -75,7 +75,7 @@ extension AnalysisViewController: UITableViewDataSource {
         case .lineChart:
             return "スコアの推移"
         case .pieChart:
-            return "発言回数"
+            return "発言率"
         }
     }
 }

@@ -36,7 +36,6 @@
 		323C31F120481AD700493C73 /* RedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F020481AD700493C73 /* RedList.swift */; };
 		323C31F420481C8400493C73 /* RedList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 323C31F320481C8400493C73 /* RedList.plist */; };
 		323C31F62048219E00493C73 /* PlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F52048219E00493C73 /* PlistReader.swift */; };
-		323C31F920483BB500493C73 /* SelectUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F820483BB500493C73 /* SelectUserView.swift */; };
 		323C31FB20483D8A00493C73 /* Participants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31FA20483D8A00493C73 /* Participants.swift */; };
 		327BB58F204924BF0033216C /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB58E204924BF0033216C /* ScoreViewController.swift */; };
 		327BB593204927E90033216C /* ScoreCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB591204927E90033216C /* ScoreCardCell.swift */; };
@@ -48,6 +47,27 @@
 		327BB59F204E353E0033216C /* LineChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB59D204E353E0033216C /* LineChartCell.xib */; };
 		327BB5A3204E435D0033216C /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5A1204E435D0033216C /* PieChartCell.swift */; };
 		327BB5A4204E435D0033216C /* PieChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5A2204E435D0033216C /* PieChartCell.xib */; };
+		327BB5A72051363D0033216C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5A62051363D0033216C /* SettingViewController.swift */; };
+		327BB5AB2051372F0033216C /* SetMemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5A92051372E0033216C /* SetMemberCell.swift */; };
+		327BB5AC2051372F0033216C /* SetMemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5AA2051372E0033216C /* SetMemberCell.xib */; };
+		327BB5B02051408B0033216C /* IntroductionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5AE2051408B0033216C /* IntroductionCell.swift */; };
+		327BB5B12051408B0033216C /* IntroductionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5AF2051408B0033216C /* IntroductionCell.xib */; };
+		327BB5B5205143960033216C /* UserNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5B3205143960033216C /* UserNameCell.swift */; };
+		327BB5B6205143960033216C /* UserNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5B4205143960033216C /* UserNameCell.xib */; };
+		327BB5BA205158D40033216C /* SetTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5B8205158D40033216C /* SetTimeCell.swift */; };
+		327BB5BB205158D40033216C /* SetTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5B9205158D40033216C /* SetTimeCell.xib */; };
+		327BB5BF205161EE0033216C /* StartGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5BD205161EE0033216C /* StartGameCell.swift */; };
+		327BB5C0205161EE0033216C /* StartGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5BE205161EE0033216C /* StartGameCell.xib */; };
+		327BB5C3205247390033216C /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5C2205247390033216C /* NSAttributedString+Extension.swift */; };
+		327BB5C62052509C0033216C /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5C42052509C0033216C /* AnimalCell.swift */; };
+		327BB5C72052509C0033216C /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5C52052509C0033216C /* AnimalCell.xib */; };
+		327BB5CB205258CC0033216C /* GameFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5C9205258CC0033216C /* GameFlowCell.swift */; };
+		327BB5CC205258CC0033216C /* GameFlowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB5CA205258CC0033216C /* GameFlowCell.xib */; };
+		327BB5CF205261390033216C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5CE205261390033216C /* UIColor+Extension.swift */; };
+		327D0779205270E700009A2E /* RestTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D0777205270E700009A2E /* RestTimeCell.swift */; };
+		327D077A205270E700009A2E /* RestTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D0778205270E700009A2E /* RestTimeCell.xib */; };
+		327D077E205273E700009A2E /* PlayingUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D077C205273E700009A2E /* PlayingUserCell.swift */; };
+		327D077F205273E700009A2E /* PlayingUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D077D205273E700009A2E /* PlayingUserCell.xib */; };
 		32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6995F20490E3200122F16 /* UIView+Extension.swift */; };
 		32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6996120490F9000122F16 /* UIViewController+Extension.swift */; };
 		32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F699632049192A00122F16 /* UIStackView+Extension.swift */; };
@@ -110,7 +130,6 @@
 		323C31F020481AD700493C73 /* RedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedList.swift; sourceTree = "<group>"; };
 		323C31F320481C8400493C73 /* RedList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RedList.plist; sourceTree = "<group>"; };
 		323C31F52048219E00493C73 /* PlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReader.swift; sourceTree = "<group>"; };
-		323C31F820483BB500493C73 /* SelectUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserView.swift; sourceTree = "<group>"; };
 		323C31FA20483D8A00493C73 /* Participants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Participants.swift; sourceTree = "<group>"; };
 		327BB58E204924BF0033216C /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		327BB591204927E90033216C /* ScoreCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardCell.swift; sourceTree = "<group>"; };
@@ -122,6 +141,27 @@
 		327BB59D204E353E0033216C /* LineChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineChartCell.xib; sourceTree = "<group>"; };
 		327BB5A1204E435D0033216C /* PieChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
 		327BB5A2204E435D0033216C /* PieChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieChartCell.xib; sourceTree = "<group>"; };
+		327BB5A62051363D0033216C /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		327BB5A92051372E0033216C /* SetMemberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMemberCell.swift; sourceTree = "<group>"; };
+		327BB5AA2051372E0033216C /* SetMemberCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetMemberCell.xib; sourceTree = "<group>"; };
+		327BB5AE2051408B0033216C /* IntroductionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionCell.swift; sourceTree = "<group>"; };
+		327BB5AF2051408B0033216C /* IntroductionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroductionCell.xib; sourceTree = "<group>"; };
+		327BB5B3205143960033216C /* UserNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNameCell.swift; sourceTree = "<group>"; };
+		327BB5B4205143960033216C /* UserNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameCell.xib; sourceTree = "<group>"; };
+		327BB5B8205158D40033216C /* SetTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTimeCell.swift; sourceTree = "<group>"; };
+		327BB5B9205158D40033216C /* SetTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetTimeCell.xib; sourceTree = "<group>"; };
+		327BB5BD205161EE0033216C /* StartGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartGameCell.swift; sourceTree = "<group>"; };
+		327BB5BE205161EE0033216C /* StartGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartGameCell.xib; sourceTree = "<group>"; };
+		327BB5C2205247390033216C /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		327BB5C42052509C0033216C /* AnimalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		327BB5C52052509C0033216C /* AnimalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
+		327BB5C9205258CC0033216C /* GameFlowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFlowCell.swift; sourceTree = "<group>"; };
+		327BB5CA205258CC0033216C /* GameFlowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameFlowCell.xib; sourceTree = "<group>"; };
+		327BB5CE205261390033216C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		327D0777205270E700009A2E /* RestTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestTimeCell.swift; sourceTree = "<group>"; };
+		327D0778205270E700009A2E /* RestTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestTimeCell.xib; sourceTree = "<group>"; };
+		327D077C205273E700009A2E /* PlayingUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingUserCell.swift; sourceTree = "<group>"; };
+		327D077D205273E700009A2E /* PlayingUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayingUserCell.xib; sourceTree = "<group>"; };
 		32F6995F20490E3200122F16 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		32F6996120490F9000122F16 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		32F699632049192A00122F16 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -229,6 +269,8 @@
 				32F6996120490F9000122F16 /* UIViewController+Extension.swift */,
 				32F699632049192A00122F16 /* UIStackView+Extension.swift */,
 				327BB595204929600033216C /* UITableView+Extension.swift */,
+				327BB5C2205247390033216C /* NSAttributedString+Extension.swift */,
+				327BB5CE205261390033216C /* UIColor+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -236,6 +278,7 @@
 		323C31CA2047FF1E00493C73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				327BB5A8205136420033216C /* Setting */,
 				327BB58D2049248C0033216C /* Cards */,
 				327BB590204924D00033216C /* Score */,
 				327BB59B204CE8AA0033216C /* Analysis */,
@@ -289,7 +332,8 @@
 			isa = PBXGroup;
 			children = (
 				323C31C52047FDE700493C73 /* CardsViewController.swift */,
-				323C31F820483BB500493C73 /* SelectUserView.swift */,
+				327D07802052742C00009A2E /* PlayingUserCell */,
+				327D077B205270F600009A2E /* RestTime */,
 				323C31F72048395500493C73 /* CardCell */,
 			);
 			name = Cards;
@@ -331,6 +375,110 @@
 				327BB5A2204E435D0033216C /* PieChartCell.xib */,
 			);
 			name = PieChart;
+			sourceTree = "<group>";
+		};
+		327BB5A8205136420033216C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5A62051363D0033216C /* SettingViewController.swift */,
+				327D077620526B6800009A2E /* Views */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		327BB5AD205137320033216C /* SetMember */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5A92051372E0033216C /* SetMemberCell.swift */,
+				327BB5AA2051372E0033216C /* SetMemberCell.xib */,
+			);
+			name = SetMember;
+			sourceTree = "<group>";
+		};
+		327BB5B22051408F0033216C /* IntroductionCell */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5AE2051408B0033216C /* IntroductionCell.swift */,
+				327BB5AF2051408B0033216C /* IntroductionCell.xib */,
+			);
+			name = IntroductionCell;
+			sourceTree = "<group>";
+		};
+		327BB5B72051439C0033216C /* UserNameCell */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5B3205143960033216C /* UserNameCell.swift */,
+				327BB5B4205143960033216C /* UserNameCell.xib */,
+			);
+			name = UserNameCell;
+			sourceTree = "<group>";
+		};
+		327BB5BC205158D90033216C /* SetTime */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5B8205158D40033216C /* SetTimeCell.swift */,
+				327BB5B9205158D40033216C /* SetTimeCell.xib */,
+			);
+			name = SetTime;
+			sourceTree = "<group>";
+		};
+		327BB5C1205161F80033216C /* StartGameCell */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5BD205161EE0033216C /* StartGameCell.swift */,
+				327BB5BE205161EE0033216C /* StartGameCell.xib */,
+			);
+			name = StartGameCell;
+			sourceTree = "<group>";
+		};
+		327BB5C8205250A30033216C /* AnimalCell */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5C42052509C0033216C /* AnimalCell.swift */,
+				327BB5C52052509C0033216C /* AnimalCell.xib */,
+			);
+			name = AnimalCell;
+			sourceTree = "<group>";
+		};
+		327BB5CD205258D10033216C /* GameFlow */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5C9205258CC0033216C /* GameFlowCell.swift */,
+				327BB5CA205258CC0033216C /* GameFlowCell.xib */,
+			);
+			name = GameFlow;
+			sourceTree = "<group>";
+		};
+		327D077620526B6800009A2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5C8205250A30033216C /* AnimalCell */,
+				327BB5C1205161F80033216C /* StartGameCell */,
+				327BB5BC205158D90033216C /* SetTime */,
+				327BB5B22051408F0033216C /* IntroductionCell */,
+				327BB5AD205137320033216C /* SetMember */,
+				327BB5B72051439C0033216C /* UserNameCell */,
+				327BB5CD205258D10033216C /* GameFlow */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		327D077B205270F600009A2E /* RestTime */ = {
+			isa = PBXGroup;
+			children = (
+				327D0777205270E700009A2E /* RestTimeCell.swift */,
+				327D0778205270E700009A2E /* RestTimeCell.xib */,
+			);
+			name = RestTime;
+			sourceTree = "<group>";
+		};
+		327D07802052742C00009A2E /* PlayingUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				327D077C205273E700009A2E /* PlayingUserCell.swift */,
+				327D077D205273E700009A2E /* PlayingUserCell.xib */,
+			);
+			name = PlayingUserCell;
 			sourceTree = "<group>";
 		};
 		32F6996720491AE000122F16 /* Views */ = {
@@ -490,20 +638,29 @@
 				323C319E2047F29300493C73 /* LaunchScreen.storyboard in Resources */,
 				323C31EA20481AB700493C73 /* choeropsis.png in Resources */,
 				323C31E820481AB700493C73 /* giraffa.png in Resources */,
+				327BB5B12051408B0033216C /* IntroductionCell.xib in Resources */,
+				327D077A205270E700009A2E /* RestTimeCell.xib in Resources */,
 				323C31E420481AB700493C73 /* panthera.png in Resources */,
+				327BB5CC205258CC0033216C /* GameFlowCell.xib in Resources */,
+				327BB5C72052509C0033216C /* AnimalCell.xib in Resources */,
 				323C31E020481AB700493C73 /* rhinoceros.png in Resources */,
 				323C31E220481AB700493C73 /* camelus.png in Resources */,
 				323C31E920481AB700493C73 /* mola.png in Resources */,
 				327BB59F204E353E0033216C /* LineChartCell.xib in Resources */,
+				327BB5BB205158D40033216C /* SetTimeCell.xib in Resources */,
 				323C31E520481AB700493C73 /* pongo.png in Resources */,
 				323C31CE2048019000493C73 /* CardCell.xib in Resources */,
+				327BB5C0205161EE0033216C /* StartGameCell.xib in Resources */,
 				323C31EC20481AB700493C73 /* psephotus.png in Resources */,
 				323C31F420481C8400493C73 /* RedList.plist in Resources */,
 				323C31EE20481AB700493C73 /* anguilla.png in Resources */,
 				323C31E120481AB700493C73 /* bison.png in Resources */,
 				323C31E720481AB700493C73 /* gorilla.png in Resources */,
+				327BB5B6205143960033216C /* UserNameCell.xib in Resources */,
+				327D077F205273E700009A2E /* PlayingUserCell.xib in Resources */,
 				323C31ED20481AB700493C73 /* balaenoptera.png in Resources */,
 				323C319B2047F29300493C73 /* Assets.xcassets in Resources */,
+				327BB5AC2051372F0033216C /* SetMemberCell.xib in Resources */,
 				323C31E620481AB700493C73 /* pentalagus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,18 +824,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327D0779205270E700009A2E /* RestTimeCell.swift in Sources */,
 				323C31C62047FDE700493C73 /* CardsViewController.swift in Sources */,
 				32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */,
+				327D077E205273E700009A2E /* PlayingUserCell.swift in Sources */,
+				327BB5BF205161EE0033216C /* StartGameCell.swift in Sources */,
 				323C31F120481AD700493C73 /* RedList.swift in Sources */,
 				323C31D0204801C500493C73 /* UICollectionView+Extension.swift in Sources */,
+				327BB5B02051408B0033216C /* IntroductionCell.swift in Sources */,
+				327BB5B5205143960033216C /* UserNameCell.swift in Sources */,
 				32F6996620491AB300122F16 /* BannerMessageView.swift in Sources */,
+				327BB5A72051363D0033216C /* SettingViewController.swift in Sources */,
+				327BB5CF205261390033216C /* UIColor+Extension.swift in Sources */,
 				327BB5A3204E435D0033216C /* PieChartCell.swift in Sources */,
 				327BB59E204E353E0033216C /* LineChartCell.swift in Sources */,
-				323C31F920483BB500493C73 /* SelectUserView.swift in Sources */,
 				32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */,
+				327BB5C62052509C0033216C /* AnimalCell.swift in Sources */,
+				327BB5AB2051372F0033216C /* SetMemberCell.swift in Sources */,
 				327BB58F204924BF0033216C /* ScoreViewController.swift in Sources */,
+				327BB5BA205158D40033216C /* SetTimeCell.swift in Sources */,
 				323C31C82047FF0900493C73 /* UIApplication+Extension.swift in Sources */,
+				327BB5CB205258CC0033216C /* GameFlowCell.swift in Sources */,
 				323C31F62048219E00493C73 /* PlistReader.swift in Sources */,
+				327BB5C3205247390033216C /* NSAttributedString+Extension.swift in Sources */,
 				327BB593204927E90033216C /* ScoreCardCell.swift in Sources */,
 				323C31942047F29300493C73 /* AppDelegate.swift in Sources */,
 				323C31FB20483D8A00493C73 /* Participants.swift in Sources */,
