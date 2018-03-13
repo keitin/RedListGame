@@ -4,16 +4,19 @@ import Charts
 class PieChartCell: UITableViewCell {
 
     let pieChartView = PieChartView()
+    let cellHeight: CGFloat = 400.0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         selectionStyle = .none
         addSubview(pieChartView)
+        pieChartView.heightEqualTo(constant: cellHeight)
         pieChartView.pinTo(superView: self, constant: 0)
         pieChartView.isUserInteractionEnabled = false
         pieChartView.rotationEnabled = false
         pieChartView.legend.enabled = false
+        pieChartView.extraBottomOffset = 20.0
     }
     
     func update(with timeLine: TimeLine) {

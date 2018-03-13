@@ -6,13 +6,20 @@ class LineChartCell: UITableViewCell {
     private let chartMargin: CGFloat = 20.0
     private let lineChartView = LineChartView()
     fileprivate weak var timeLine: TimeLine!
+    let cellHeight: CGFloat = 400.0
+    let margin: CGFloat = 20.0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
         addSubview(lineChartView)
+        lineChartView.heightEqualTo(constant: cellHeight)
         lineChartView.pinTo(superView: self, constant: 0)
         lineChartView.legend.enabled = false
+        lineChartView.extraLeftOffset = margin
+        lineChartView.extraRightOffset = margin
+        lineChartView.extraTopOffset = margin
+        lineChartView.extraBottomOffset = margin
     }
     
     func update(with timeLine: TimeLine) {

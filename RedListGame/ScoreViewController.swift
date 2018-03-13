@@ -4,7 +4,24 @@ class ScoreViewController: UIViewController {
 
     fileprivate let timeLine: TimeLine
     fileprivate let redList: RedList?
-    private var tableView = UITableView()
+    
+    fileprivate enum LeftSection: Int {
+        case scoreCard
+        case lineChart
+        case pieChart
+        static let count = 3
+    }
+    
+    fileprivate enum RightSection: Int {
+        case finalScore
+        static let count = 1
+    }
+    
+    let leftTableView = UITableView()
+    let rightTableView = UITableView()
+    
+    let leftTableViewTag = 1
+    let rightTableViewTag = 2
     
     init(timeLine: TimeLine) {
         self.timeLine = timeLine
@@ -20,32 +37,37 @@ class ScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "今回のスコア: \(timeLine.getLatestScore())"
-        tableView.frame = view.frame
-        tableView.frame.size.height = view.frame.height - navigationBarHeight - statusBarHeight
-        tableView.separatorStyle = .none
-        tableView.dataSource = self
-        tableView.estimatedRowHeight = 90
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.register(type: ScoreCardCell.self)
-        view.addSubview(tableView)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        view.backgroundColor = .lightGray
         
-        let toAnalysisButton = UIBarButtonItem(title: "解析", style: .plain, target: self, action: #selector(ScoreViewController.didTapToAnalysisButton(sender:)))
-        navigationItem.rightBarButtonItem = toAnalysisButton
-    }
-    
-    func didTapToAnalysisButton(sender: UIBarButtonItem) {
-        let analysisViewController = AnalysisViewController(timeLine: timeLine)
-        navigationController?.pushViewController(analysisViewController, animated: true)
+        view.addSubview(leftTableView)
+        setTableView(tableView: leftTableView)
+        leftTableView.leading(equalTo: view.leadingAnchor, constatnt: 0)
+        leftTableView.widthEqualTo(constant: view.frame.width * 2 / 3 - 1.0)
+        leftTableView.tag = leftTableViewTag
+        leftTableView.register(type: ScoreCardCell.self)
+        leftTableView.register(type: LineChartCell.self)
+        leftTableView.register(type: PieChartCell.self)
+        
+        view.addSubview(rightTableView)
+        setTableView(tableView: rightTableView)
+        rightTableView.trailing(equalTo: view.trailingAnchor, constatnt: 0)
+        rightTableView.widthEqualTo(constant: view.frame.width * 1 / 3 )
+        rightTableView.tag = rightTableViewTag
+        rightTableView.register(type: FinalScoreCell.self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func setTableView(tableView: UITableView) {
+        tableView.top(equalTo: view.topAnchor, constatnt: 0)
+        tableView.bottom(equalTo: view.bottomAnchor, constatnt: 0)
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 90
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
     }
 }
 
@@ -53,15 +75,93 @@ class ScoreViewController: UIViewController {
 
 extension ScoreViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if tableView.tag == rightTableViewTag {
+            return RightSection.count
+        } else {
+            return LeftSection.count
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return redList?.numerOfAnimals ?? 0
+        if tableView.tag == leftTableViewTag {
+            guard let section = LeftSection.init(rawValue: section) else {
+                fatalError("Invalid section")
+            }
+            switch section {
+            case .scoreCard:
+                return redList?.numerOfAnimals ?? 0
+            case .lineChart:
+                return 1
+            case .pieChart:
+                return 1
+            }
+        } else {
+            guard let section = RightSection.init(rawValue: section) else {
+                fatalError("Invalid section")
+            }
+            switch section {
+            case .finalScore:
+                return 1
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ScoreCardCell = tableView.dequeueCell(indexPath: indexPath)
-        let animal = redList!.getAnimal(with: indexPath.row)
-        cell.update(with: animal)
-        return cell
+        if tableView.tag == leftTableViewTag {
+            guard let section = LeftSection.init(rawValue: indexPath.section) else {
+                fatalError("Invalid section")
+            }
+            switch section {
+            case .scoreCard:
+                let cell: ScoreCardCell = tableView.dequeueCell(indexPath: indexPath)
+                let animal = redList!.getAnimal(with: indexPath.row)
+                cell.update(with: animal)
+                return cell
+            case .lineChart:
+                let cell: LineChartCell = tableView.dequeueCell(indexPath: indexPath)
+                cell.update(with: timeLine)
+                return cell
+            case .pieChart:
+                let cell: PieChartCell = tableView.dequeueCell(indexPath: indexPath)
+                cell.update(with: timeLine)
+                return cell
+            }
+        } else {
+            guard let section = RightSection.init(rawValue: indexPath.section) else {
+                fatalError("Invalid section")
+            }
+            switch section {
+            case .finalScore:
+                let cell: FinalScoreCell = tableView.dequeueCell(indexPath: indexPath)
+                cell.update(with: timeLine)
+                return cell
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if tableView.tag == leftTableViewTag {
+            guard let section = LeftSection.init(rawValue: section) else {
+                fatalError("Invalid section")
+            }
+            switch section {
+            case .lineChart:
+                return "スコアの推移"
+            case .pieChart:
+                return "発言率"
+            default:
+                return nil
+            }
+        } else {
+            guard let section = RightSection.init(rawValue: section) else {
+                fatalError("Invalid section")
+            }
+            switch section {
+            case .finalScore:
+                return "あなたのスコア"
+            }
+        }
     }
 }
 

@@ -33,7 +33,7 @@ class TimeLine {
         var prevScore = initialScore
         for operation in operations {
             let currScore = operation.redList.calculateScore()
-            if operation.user.isEqual(user: user) && currScore > prevScore {
+            if operation.user.isEqual(user: user) && currScore < prevScore {
                 count = count + 1
             }
             prevScore = currScore
@@ -46,7 +46,7 @@ class TimeLine {
         var prevScore = initialScore
         for operation in operations {
             let currScore = operation.redList.calculateScore()
-            if operation.user.isEqual(user: user) && currScore <= prevScore {
+            if operation.user.isEqual(user: user) && currScore >= prevScore {
                 count = count + 1
             }
             prevScore = currScore

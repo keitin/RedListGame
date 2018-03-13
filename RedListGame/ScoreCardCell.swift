@@ -5,7 +5,6 @@ class ScoreCardCell: UITableViewCell {
     private let animalNameLabel = UILabel()
     private let correctLabel = UILabel()
     private let answerLabel = UILabel()
-    private let memoLabel = UILabel()
     private let diffLabel = UILabel()
     private let bottomBorderView = UIView()
     
@@ -45,11 +44,6 @@ class ScoreCardCell: UITableViewCell {
         diffLabel.widthEqualTo(constant: itemWidth / 2.0)
         diffLabel.leading(equalTo: answerLabel.trailingAnchor, constatnt: itemMargin)
         
-        addSubview(memoLabel)
-        setCommonAutoLayout(view: memoLabel)
-        memoLabel.leading(equalTo: diffLabel.trailingAnchor, constatnt: itemMargin)
-        memoLabel.trailing(equalTo: self.trailingAnchor, constatnt: itemMargin)
-        
         addSubview(bottomBorderView)
         bottomBorderView.backgroundColor = .lightGray
         bottomBorderView.leading(equalTo: self.leadingAnchor, constatnt: 20)
@@ -64,7 +58,6 @@ class ScoreCardCell: UITableViewCell {
         correctLabel.text = "正解: \(animal.correctOrder)"
         answerLabel.text = "あなたの解答: \(animal.answerOrder)"
         diffLabel.text = "差: \(abs(animal.correctOrder - animal.answerOrder))"
-        memoLabel.text = animal.hint ?? ""
     }
     
     func setCommonAutoLayout(view: UILabel) {

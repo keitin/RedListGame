@@ -18,21 +18,6 @@
 		323C31CD2048019000493C73 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31CB2048019000493C73 /* CardCell.swift */; };
 		323C31CE2048019000493C73 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 323C31CC2048019000493C73 /* CardCell.xib */; };
 		323C31D0204801C500493C73 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31CF204801C500493C73 /* UICollectionView+Extension.swift */; };
-		323C31E020481AB700493C73 /* rhinoceros.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D120481AB700493C73 /* rhinoceros.png */; };
-		323C31E120481AB700493C73 /* bison.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D220481AB700493C73 /* bison.png */; };
-		323C31E220481AB700493C73 /* camelus.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D320481AB700493C73 /* camelus.png */; };
-		323C31E320481AB700493C73 /* macrochelys.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D420481AB700493C73 /* macrochelys.png */; };
-		323C31E420481AB700493C73 /* panthera.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D520481AB700493C73 /* panthera.png */; };
-		323C31E520481AB700493C73 /* pongo.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D620481AB700493C73 /* pongo.png */; };
-		323C31E620481AB700493C73 /* pentalagus.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D720481AB700493C73 /* pentalagus.png */; };
-		323C31E720481AB700493C73 /* gorilla.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D820481AB700493C73 /* gorilla.png */; };
-		323C31E820481AB700493C73 /* giraffa.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31D920481AB700493C73 /* giraffa.png */; };
-		323C31E920481AB700493C73 /* mola.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DA20481AB700493C73 /* mola.png */; };
-		323C31EA20481AB700493C73 /* choeropsis.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DB20481AB700493C73 /* choeropsis.png */; };
-		323C31EB20481AB700493C73 /* ciconia.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DC20481AB700493C73 /* ciconia.png */; };
-		323C31EC20481AB700493C73 /* psephotus.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DD20481AB700493C73 /* psephotus.png */; };
-		323C31ED20481AB700493C73 /* balaenoptera.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DE20481AB700493C73 /* balaenoptera.png */; };
-		323C31EE20481AB700493C73 /* anguilla.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C31DF20481AB700493C73 /* anguilla.png */; };
 		323C31F120481AD700493C73 /* RedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F020481AD700493C73 /* RedList.swift */; };
 		323C31F420481C8400493C73 /* RedList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 323C31F320481C8400493C73 /* RedList.plist */; };
 		323C31F62048219E00493C73 /* PlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C31F52048219E00493C73 /* PlistReader.swift */; };
@@ -42,7 +27,6 @@
 		327BB594204927E90033216C /* ScoreCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB592204927E90033216C /* ScoreCardCell.xib */; };
 		327BB596204929600033216C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB595204929600033216C /* UITableView+Extension.swift */; };
 		327BB598204965000033216C /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB597204965000033216C /* Operation.swift */; };
-		327BB59A204CE8950033216C /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB599204CE8950033216C /* AnalysisViewController.swift */; };
 		327BB59E204E353E0033216C /* LineChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB59C204E353E0033216C /* LineChartCell.swift */; };
 		327BB59F204E353E0033216C /* LineChartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327BB59D204E353E0033216C /* LineChartCell.xib */; };
 		327BB5A3204E435D0033216C /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327BB5A1204E435D0033216C /* PieChartCell.swift */; };
@@ -68,6 +52,23 @@
 		327D077A205270E700009A2E /* RestTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D0778205270E700009A2E /* RestTimeCell.xib */; };
 		327D077E205273E700009A2E /* PlayingUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D077C205273E700009A2E /* PlayingUserCell.swift */; };
 		327D077F205273E700009A2E /* PlayingUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D077D205273E700009A2E /* PlayingUserCell.xib */; };
+		327D07902053948300009A2E /* rhinoceros.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07812053948300009A2E /* rhinoceros.png */; };
+		327D07912053948300009A2E /* bison.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07822053948300009A2E /* bison.png */; };
+		327D07922053948300009A2E /* macrochelys.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07832053948300009A2E /* macrochelys.png */; };
+		327D07932053948300009A2E /* panthera.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07842053948300009A2E /* panthera.png */; };
+		327D07942053948300009A2E /* camelus.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07852053948300009A2E /* camelus.png */; };
+		327D07952053948300009A2E /* pongo.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07862053948300009A2E /* pongo.png */; };
+		327D07962053948300009A2E /* pentalagus.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07872053948300009A2E /* pentalagus.png */; };
+		327D07972053948300009A2E /* gorilla.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07882053948300009A2E /* gorilla.png */; };
+		327D07982053948300009A2E /* mola.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D07892053948300009A2E /* mola.png */; };
+		327D07992053948300009A2E /* giraffa.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D078A2053948300009A2E /* giraffa.png */; };
+		327D079A2053948300009A2E /* choeropsis.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D078B2053948300009A2E /* choeropsis.png */; };
+		327D079B2053948300009A2E /* ciconia.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D078C2053948300009A2E /* ciconia.png */; };
+		327D079C2053948300009A2E /* psephotus.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D078D2053948300009A2E /* psephotus.png */; };
+		327D079D2053948300009A2E /* anguilla.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D078E2053948300009A2E /* anguilla.png */; };
+		327D079E2053948300009A2E /* balaenoptera.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D078F2053948300009A2E /* balaenoptera.png */; };
+		327D07A220566FAD00009A2E /* FinalScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D07A020566FAD00009A2E /* FinalScoreCell.swift */; };
+		327D07A320566FAD00009A2E /* FinalScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D07A120566FAD00009A2E /* FinalScoreCell.xib */; };
 		32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6995F20490E3200122F16 /* UIView+Extension.swift */; };
 		32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6996120490F9000122F16 /* UIViewController+Extension.swift */; };
 		32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F699632049192A00122F16 /* UIStackView+Extension.swift */; };
@@ -112,21 +113,6 @@
 		323C31CB2048019000493C73 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		323C31CC2048019000493C73 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		323C31CF204801C500493C73 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
-		323C31D120481AB700493C73 /* rhinoceros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rhinoceros.png; sourceTree = "<group>"; };
-		323C31D220481AB700493C73 /* bison.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bison.png; sourceTree = "<group>"; };
-		323C31D320481AB700493C73 /* camelus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camelus.png; sourceTree = "<group>"; };
-		323C31D420481AB700493C73 /* macrochelys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macrochelys.png; sourceTree = "<group>"; };
-		323C31D520481AB700493C73 /* panthera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panthera.png; sourceTree = "<group>"; };
-		323C31D620481AB700493C73 /* pongo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pongo.png; sourceTree = "<group>"; };
-		323C31D720481AB700493C73 /* pentalagus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pentalagus.png; sourceTree = "<group>"; };
-		323C31D820481AB700493C73 /* gorilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gorilla.png; sourceTree = "<group>"; };
-		323C31D920481AB700493C73 /* giraffa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffa.png; sourceTree = "<group>"; };
-		323C31DA20481AB700493C73 /* mola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mola.png; sourceTree = "<group>"; };
-		323C31DB20481AB700493C73 /* choeropsis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choeropsis.png; sourceTree = "<group>"; };
-		323C31DC20481AB700493C73 /* ciconia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ciconia.png; sourceTree = "<group>"; };
-		323C31DD20481AB700493C73 /* psephotus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psephotus.png; sourceTree = "<group>"; };
-		323C31DE20481AB700493C73 /* balaenoptera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balaenoptera.png; sourceTree = "<group>"; };
-		323C31DF20481AB700493C73 /* anguilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anguilla.png; sourceTree = "<group>"; };
 		323C31F020481AD700493C73 /* RedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedList.swift; sourceTree = "<group>"; };
 		323C31F320481C8400493C73 /* RedList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RedList.plist; sourceTree = "<group>"; };
 		323C31F52048219E00493C73 /* PlistReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistReader.swift; sourceTree = "<group>"; };
@@ -136,7 +122,6 @@
 		327BB592204927E90033216C /* ScoreCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCardCell.xib; sourceTree = "<group>"; };
 		327BB595204929600033216C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		327BB597204965000033216C /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
-		327BB599204CE8950033216C /* AnalysisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		327BB59C204E353E0033216C /* LineChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartCell.swift; sourceTree = "<group>"; };
 		327BB59D204E353E0033216C /* LineChartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineChartCell.xib; sourceTree = "<group>"; };
 		327BB5A1204E435D0033216C /* PieChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
@@ -162,6 +147,23 @@
 		327D0778205270E700009A2E /* RestTimeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestTimeCell.xib; sourceTree = "<group>"; };
 		327D077C205273E700009A2E /* PlayingUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingUserCell.swift; sourceTree = "<group>"; };
 		327D077D205273E700009A2E /* PlayingUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayingUserCell.xib; sourceTree = "<group>"; };
+		327D07812053948300009A2E /* rhinoceros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rhinoceros.png; sourceTree = "<group>"; };
+		327D07822053948300009A2E /* bison.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bison.png; sourceTree = "<group>"; };
+		327D07832053948300009A2E /* macrochelys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macrochelys.png; sourceTree = "<group>"; };
+		327D07842053948300009A2E /* panthera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = panthera.png; sourceTree = "<group>"; };
+		327D07852053948300009A2E /* camelus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camelus.png; sourceTree = "<group>"; };
+		327D07862053948300009A2E /* pongo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pongo.png; sourceTree = "<group>"; };
+		327D07872053948300009A2E /* pentalagus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pentalagus.png; sourceTree = "<group>"; };
+		327D07882053948300009A2E /* gorilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gorilla.png; sourceTree = "<group>"; };
+		327D07892053948300009A2E /* mola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mola.png; sourceTree = "<group>"; };
+		327D078A2053948300009A2E /* giraffa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giraffa.png; sourceTree = "<group>"; };
+		327D078B2053948300009A2E /* choeropsis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choeropsis.png; sourceTree = "<group>"; };
+		327D078C2053948300009A2E /* ciconia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ciconia.png; sourceTree = "<group>"; };
+		327D078D2053948300009A2E /* psephotus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psephotus.png; sourceTree = "<group>"; };
+		327D078E2053948300009A2E /* anguilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anguilla.png; sourceTree = "<group>"; };
+		327D078F2053948300009A2E /* balaenoptera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balaenoptera.png; sourceTree = "<group>"; };
+		327D07A020566FAD00009A2E /* FinalScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalScoreCell.swift; sourceTree = "<group>"; };
+		327D07A120566FAD00009A2E /* FinalScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalScoreCell.xib; sourceTree = "<group>"; };
 		32F6995F20490E3200122F16 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		32F6996120490F9000122F16 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		32F699632049192A00122F16 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -281,7 +283,6 @@
 				327BB5A8205136420033216C /* Setting */,
 				327BB58D2049248C0033216C /* Cards */,
 				327BB590204924D00033216C /* Score */,
-				327BB59B204CE8AA0033216C /* Analysis */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -289,21 +290,21 @@
 		323C31EF20481ABE00493C73 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				323C31D120481AB700493C73 /* rhinoceros.png */,
-				323C31D220481AB700493C73 /* bison.png */,
-				323C31D320481AB700493C73 /* camelus.png */,
-				323C31D420481AB700493C73 /* macrochelys.png */,
-				323C31D520481AB700493C73 /* panthera.png */,
-				323C31D620481AB700493C73 /* pongo.png */,
-				323C31D720481AB700493C73 /* pentalagus.png */,
-				323C31D820481AB700493C73 /* gorilla.png */,
-				323C31D920481AB700493C73 /* giraffa.png */,
-				323C31DA20481AB700493C73 /* mola.png */,
-				323C31DB20481AB700493C73 /* choeropsis.png */,
-				323C31DC20481AB700493C73 /* ciconia.png */,
-				323C31DD20481AB700493C73 /* psephotus.png */,
-				323C31DE20481AB700493C73 /* balaenoptera.png */,
-				323C31DF20481AB700493C73 /* anguilla.png */,
+				327D07812053948300009A2E /* rhinoceros.png */,
+				327D07822053948300009A2E /* bison.png */,
+				327D07832053948300009A2E /* macrochelys.png */,
+				327D07842053948300009A2E /* panthera.png */,
+				327D07852053948300009A2E /* camelus.png */,
+				327D07862053948300009A2E /* pongo.png */,
+				327D07872053948300009A2E /* pentalagus.png */,
+				327D07882053948300009A2E /* gorilla.png */,
+				327D07892053948300009A2E /* mola.png */,
+				327D078A2053948300009A2E /* giraffa.png */,
+				327D078B2053948300009A2E /* choeropsis.png */,
+				327D078C2053948300009A2E /* ciconia.png */,
+				327D078D2053948300009A2E /* psephotus.png */,
+				327D078E2053948300009A2E /* anguilla.png */,
+				327D078F2053948300009A2E /* balaenoptera.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -343,20 +344,12 @@
 			isa = PBXGroup;
 			children = (
 				327BB58E204924BF0033216C /* ScoreViewController.swift */,
-				327BB591204927E90033216C /* ScoreCardCell.swift */,
-				327BB592204927E90033216C /* ScoreCardCell.xib */,
-			);
-			name = Score;
-			sourceTree = "<group>";
-		};
-		327BB59B204CE8AA0033216C /* Analysis */ = {
-			isa = PBXGroup;
-			children = (
-				327BB599204CE8950033216C /* AnalysisViewController.swift */,
+				327D07A420566FB000009A2E /* FinalScoreCell */,
+				327D079F20566F5A00009A2E /* ScoreCardCell */,
 				327BB5A0204E35500033216C /* LineChartCell */,
 				327BB5A5204E43690033216C /* PieChart */,
 			);
-			name = Analysis;
+			name = Score;
 			sourceTree = "<group>";
 		};
 		327BB5A0204E35500033216C /* LineChartCell */ = {
@@ -479,6 +472,24 @@
 				327D077D205273E700009A2E /* PlayingUserCell.xib */,
 			);
 			name = PlayingUserCell;
+			sourceTree = "<group>";
+		};
+		327D079F20566F5A00009A2E /* ScoreCardCell */ = {
+			isa = PBXGroup;
+			children = (
+				327BB591204927E90033216C /* ScoreCardCell.swift */,
+				327BB592204927E90033216C /* ScoreCardCell.xib */,
+			);
+			name = ScoreCardCell;
+			sourceTree = "<group>";
+		};
+		327D07A420566FB000009A2E /* FinalScoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				327D07A020566FAD00009A2E /* FinalScoreCell.swift */,
+				327D07A120566FAD00009A2E /* FinalScoreCell.xib */,
+			);
+			name = FinalScoreCell;
 			sourceTree = "<group>";
 		};
 		32F6996720491AE000122F16 /* Views */ = {
@@ -631,37 +642,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327D07902053948300009A2E /* rhinoceros.png in Resources */,
+				327D07952053948300009A2E /* pongo.png in Resources */,
+				327D07992053948300009A2E /* giraffa.png in Resources */,
 				327BB594204927E90033216C /* ScoreCardCell.xib in Resources */,
-				323C31EB20481AB700493C73 /* ciconia.png in Resources */,
-				323C31E320481AB700493C73 /* macrochelys.png in Resources */,
 				327BB5A4204E435D0033216C /* PieChartCell.xib in Resources */,
 				323C319E2047F29300493C73 /* LaunchScreen.storyboard in Resources */,
-				323C31EA20481AB700493C73 /* choeropsis.png in Resources */,
-				323C31E820481AB700493C73 /* giraffa.png in Resources */,
 				327BB5B12051408B0033216C /* IntroductionCell.xib in Resources */,
+				327D07982053948300009A2E /* mola.png in Resources */,
 				327D077A205270E700009A2E /* RestTimeCell.xib in Resources */,
-				323C31E420481AB700493C73 /* panthera.png in Resources */,
+				327D07A320566FAD00009A2E /* FinalScoreCell.xib in Resources */,
 				327BB5CC205258CC0033216C /* GameFlowCell.xib in Resources */,
+				327D079C2053948300009A2E /* psephotus.png in Resources */,
 				327BB5C72052509C0033216C /* AnimalCell.xib in Resources */,
-				323C31E020481AB700493C73 /* rhinoceros.png in Resources */,
-				323C31E220481AB700493C73 /* camelus.png in Resources */,
-				323C31E920481AB700493C73 /* mola.png in Resources */,
 				327BB59F204E353E0033216C /* LineChartCell.xib in Resources */,
+				327D079E2053948300009A2E /* balaenoptera.png in Resources */,
 				327BB5BB205158D40033216C /* SetTimeCell.xib in Resources */,
-				323C31E520481AB700493C73 /* pongo.png in Resources */,
+				327D079A2053948300009A2E /* choeropsis.png in Resources */,
+				327D07932053948300009A2E /* panthera.png in Resources */,
 				323C31CE2048019000493C73 /* CardCell.xib in Resources */,
+				327D07912053948300009A2E /* bison.png in Resources */,
+				327D079D2053948300009A2E /* anguilla.png in Resources */,
+				327D07922053948300009A2E /* macrochelys.png in Resources */,
+				327D07942053948300009A2E /* camelus.png in Resources */,
+				327D07972053948300009A2E /* gorilla.png in Resources */,
+				327D079B2053948300009A2E /* ciconia.png in Resources */,
 				327BB5C0205161EE0033216C /* StartGameCell.xib in Resources */,
-				323C31EC20481AB700493C73 /* psephotus.png in Resources */,
 				323C31F420481C8400493C73 /* RedList.plist in Resources */,
-				323C31EE20481AB700493C73 /* anguilla.png in Resources */,
-				323C31E120481AB700493C73 /* bison.png in Resources */,
-				323C31E720481AB700493C73 /* gorilla.png in Resources */,
 				327BB5B6205143960033216C /* UserNameCell.xib in Resources */,
 				327D077F205273E700009A2E /* PlayingUserCell.xib in Resources */,
-				323C31ED20481AB700493C73 /* balaenoptera.png in Resources */,
 				323C319B2047F29300493C73 /* Assets.xcassets in Resources */,
+				327D07962053948300009A2E /* pentalagus.png in Resources */,
 				327BB5AC2051372F0033216C /* SetMemberCell.xib in Resources */,
-				323C31E620481AB700493C73 /* pentalagus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,13 +857,13 @@
 				327BB5BA205158D40033216C /* SetTimeCell.swift in Sources */,
 				323C31C82047FF0900493C73 /* UIApplication+Extension.swift in Sources */,
 				327BB5CB205258CC0033216C /* GameFlowCell.swift in Sources */,
+				327D07A220566FAD00009A2E /* FinalScoreCell.swift in Sources */,
 				323C31F62048219E00493C73 /* PlistReader.swift in Sources */,
 				327BB5C3205247390033216C /* NSAttributedString+Extension.swift in Sources */,
 				327BB593204927E90033216C /* ScoreCardCell.swift in Sources */,
 				323C31942047F29300493C73 /* AppDelegate.swift in Sources */,
 				323C31FB20483D8A00493C73 /* Participants.swift in Sources */,
 				327BB598204965000033216C /* Operation.swift in Sources */,
-				327BB59A204CE8950033216C /* AnalysisViewController.swift in Sources */,
 				32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */,
 				323C31CD2048019000493C73 /* CardCell.swift in Sources */,
 				327BB596204929600033216C /* UITableView+Extension.swift in Sources */,

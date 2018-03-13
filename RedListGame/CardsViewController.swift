@@ -40,13 +40,13 @@ class CardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        view.backgroundColor = .lightGray
         
         timeLine = TimeLine(users: participants.getUsers(), initialScore: redList.calculateScore())
         
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 2.0
-        layout.minimumInteritemSpacing = 1.0
+        layout.minimumLineSpacing = 0.0
+        layout.minimumInteritemSpacing = 0.0
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.addSubview(collectionView)
@@ -177,8 +177,8 @@ extension CardsViewController: UICollectionViewDelegate {
 extension CardsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width / numberOfCols - numberOfCols
-        let height = collectionView.frame.height / numberOfRows - numberOfRows
+        let width = collectionView.frame.width / numberOfCols
+        let height = collectionView.frame.height / numberOfRows
         return CGSize(width: width, height: height)
     }
     
