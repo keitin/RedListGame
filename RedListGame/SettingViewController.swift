@@ -9,8 +9,9 @@ class SettingViewController: UIViewController {
     let leftTableViewTag = 1
     let rightTableViewTag = 2
     
-    var userNames: [String] = []
+    var users: [User] = []
     var setTimeCell: SetTimeCell!
+    var id = 0
     
     fileprivate enum LeftSection: Int {
         case introduction
@@ -53,6 +54,12 @@ class SettingViewController: UIViewController {
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.didTapScreen(sender:)))
         view.addGestureRecognizer(gesture)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        rightTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,7 +116,7 @@ extension SettingViewController: UITableViewDataSource {
             case .setMember:
                 return 1
             case .userName:
-                return userNames.count
+                return users.count
             case .startGame:
                 return 1
             }
@@ -151,7 +158,8 @@ extension SettingViewController: UITableViewDataSource {
                 return cell
             case .userName:
                 let cell: UserNameCell = tableView.dequeueCell(indexPath: indexPath)
-                cell.update(with: userNames[indexPath.row])
+                cell.update(with: users[indexPath.row], index: indexPath.row, isHiddenButton: false)
+                cell.delegate = self
                 return cell
             case .startGame:
                 let cell: StartGameCell = tableView.dequeueCell(indexPath: indexPath)
@@ -172,7 +180,7 @@ extension SettingViewController: UITableViewDataSource {
             case .setMember:
                 return "メンバーの設定"
             case .userName:
-                return "参加メンバー \(userNames.count)人"
+                return "参加メンバー \(users.count)人"
             default:
                 return nil
             }
@@ -204,7 +212,9 @@ extension SettingViewController: UITableViewDelegate {
 
 extension SettingViewController: SetMemberCellDelegate {
     func setMemberCell(setMemberCell: SetMemberCell, didTapAddUserButton userName: String) {
-        userNames.append(userName)
+        let user = User(id: id, name: userName)
+        users.append(user)
+        id = id + 1
         rightTableView.reloadData()
     }
 }
@@ -213,12 +223,33 @@ extension SettingViewController: SetMemberCellDelegate {
 
 extension SettingViewController: StartGameCellDelegate {
     func didTapStartGameButton(startGameCell: StartGameCell) {
-        if userNames.isEmpty {
+        if users.isEmpty {
             BannerMessageView().show(superView: self.view, with: "ユーザを追加してください")
             return
         }
+        
+        for user in users {
+            if user.redList == nil {
+                let message = "\(user.name) さんの順位の入力がありません"
+                BannerMessageView().show(superView: self.view, with: message)
+                return
+            }
+        }
+        
         let setTime = setTimeCell.selectedTime
-        let cardsViewController = CardsViewController(names: userNames, setTime: setTime)
+        let cardsViewController = CardsViewController(users: users, setTime: setTime, user: nil)
         navigationController?.pushViewController(cardsViewController, animated: true)
+    }
+}
+
+
+// MARK: UserNameCellDelegate
+
+extension SettingViewController: UserNameCellDelegate {
+    func userNameCell(userNameCell: UserNameCell, didTapStartButton index: Int) {
+        let user = users[index]
+        let cardsViewController = CardsViewController(users: users, setTime: 300, user: user)
+        let navigation = UINavigationController(rootViewController: cardsViewController)
+        self.present(navigation, animated: true)
     }
 }

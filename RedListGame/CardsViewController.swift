@@ -5,7 +5,7 @@ class CardsViewController: UIViewController {
     fileprivate var collectionView: UICollectionView!
     fileprivate let tableView = UITableView()
     
-    fileprivate var redList = RedList()
+    fileprivate var redList: RedList
     fileprivate let numberOfCols: CGFloat = 5
     fileprivate let numberOfRows: CGFloat = 3
     fileprivate var selectedUser: User?
@@ -14,14 +14,20 @@ class CardsViewController: UIViewController {
     
     private let selectUserViewHeight: CGFloat = 50.0
     private var longPressGesture : UILongPressGestureRecognizer!
-    var participants: Participants
+    var users: [User]
     var setTime: Int
+    var user: User?
+    var isTeam: Bool {
+        return user == nil
+    }
     
     fileprivate var timeLine: TimeLine!
     
-    init(names: [String], setTime: Int) {
-        self.participants = Participants(names: names)
+    init(users: [User], setTime: Int, user: User?) {
+        self.users = users
         self.setTime = setTime
+        self.user = user
+        self.redList = user?.redList ?? RedList()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,8 +39,9 @@ class CardsViewController: UIViewController {
         case restTime
         case playingUser
         case users
+        case explanation
         
-        static let count = 3
+        static let count = 4
     }
     
     override func viewDidLoad() {
@@ -42,7 +49,7 @@ class CardsViewController: UIViewController {
         
         view.backgroundColor = .lightGray
         
-        timeLine = TimeLine(users: participants.getUsers(), initialScore: redList.calculateScore())
+        timeLine = TimeLine(users: users, initialScore: redList.calculateScore())
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0.0
@@ -72,6 +79,7 @@ class CardsViewController: UIViewController {
         tableView.register(type: UserNameCell.self)
         tableView.register(type: RestTimeCell.self)
         tableView.register(type: PlayingUserCell.self)
+        tableView.register(type: ExplainCell.self)
         
         longPressGesture = UILongPressGestureRecognizer(
             target: self, action: #selector(CardsViewController.handleLongGesture(gesture:))
@@ -94,7 +102,9 @@ class CardsViewController: UIViewController {
         redList.sortByAnswerOrder()
         
         let toScoreButton = UIBarButtonItem(title: "採点する", style: .done, target: self, action: #selector(CardsViewController.didTapToScoreButton(sender:)))
-        navigationItem.rightBarButtonItem = toScoreButton
+        let confirmButton = UIBarButtonItem(title: "確定", style: .done, target: self, action: #selector(CardsViewController.didTapConfirmButton(sender:)))
+        
+        navigationItem.rightBarButtonItem = isTeam ? toScoreButton : confirmButton
     }
     
     func handleLongGesture(gesture: UILongPressGestureRecognizer) {
@@ -104,7 +114,7 @@ class CardsViewController: UIViewController {
             guard let selectedIndexPath = self.collectionView.indexPathForItem(at: gesture.location(in: self.collectionView)) else {
                 break
             }
-            if selectedUser == nil ? true : false {
+            if selectedUser == nil && isTeam {
                 BannerMessageView().show(superView: self.view, with: "ユーザを選んでください")
                 return
             }
@@ -124,6 +134,11 @@ class CardsViewController: UIViewController {
         timer.invalidate()
         let scoreViewController = ScoreViewController(timeLine: timeLine)
         navigationController?.pushViewController(scoreViewController, animated: true)
+    }
+    
+    func didTapConfirmButton(sender: UIBarButtonItem) {
+        user?.redList = redList.copy()
+        dismiss(animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -202,7 +217,9 @@ extension CardsViewController: UITableViewDataSource {
         case .playingUser:
             return 1
         case .users:
-            return timeLine.users.count
+            return isTeam ? timeLine.users.count : 0
+        case .explanation:
+            return 1
         }
     }
     
@@ -218,11 +235,19 @@ extension CardsViewController: UITableViewDataSource {
             return cell
         case .playingUser:
             let cell: PlayingUserCell = tableView.dequeueCell(indexPath: indexPath)
-            cell.update(with: selectedUser)
+            cell.update(with: isTeam ? selectedUser : user)
             return cell
         case .users:
             let cell: UserNameCell = tableView.dequeueCell(indexPath: indexPath)
-            cell.update(with: timeLine.users[indexPath.row].name)
+            cell.update(with: timeLine.users[indexPath.row], index: indexPath.row, isHiddenButton: true)
+            return cell
+        case .explanation:
+            let cell: ExplainCell = tableView.dequeueCell(indexPath: indexPath)
+            if isTeam {
+                cell.update(with: "操作するユーザを選択し、カードを長押しすることでカードを移動することができます")
+            } else {
+                cell.update(with: "カードを長押しすることでカードを移動することができます")
+            }
             return cell
         }
     }
@@ -237,7 +262,9 @@ extension CardsViewController: UITableViewDataSource {
         case .playingUser:
             return "操作中のユーザ"
         case .users:
-            return "操作するユーザを選択"
+            return isTeam ? "操作するユーザを選択" : nil
+        case .explanation:
+            return "操作方法"
         }
     }
 }

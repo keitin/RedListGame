@@ -6,6 +6,11 @@ class TimeLine {
     var numberOfUsers: Int { return users.count }
     var numberOfOperations: Int { return operations.count }
     var initialScore: Int
+    var isSynergyTeam: Bool {
+        let average = calculateUsersAverageScore()
+        let score = getLatestScore()
+        return average > score
+    }
     
     init(users: [User], initialScore: Int) {
         self.users = users
@@ -52,6 +57,15 @@ class TimeLine {
             prevScore = currScore
         }
         return count
+    }
+    
+    func calculateUsersAverageScore() -> Int {
+        var sum = 0
+        for user in users {
+            sum = sum + user.redList!.calculateScore()
+        }
+        let average = sum / users.count
+        return average
     }
     
     private func calculateNumberOfComments(user: User) -> Int {

@@ -1,18 +1,17 @@
 import UIKit
 
-class PlayingUserCell: UITableViewCell {
+class UsersAverageCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var averageLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
     
-    func update(with user: User?) {
-        nameLabel.text = user?.name ?? "なし"
-        nameLabel.textColor = (user == nil) ? .black : .white
-        backgroundColor = (user == nil) ? .white : .mainColor
+    func update(with timeLine: TimeLine) {
+        let average = timeLine.calculateUsersAverageScore()
+        averageLabel.text = "\(timeLine.users.count)人の平均スコア: \(average)"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

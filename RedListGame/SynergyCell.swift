@@ -1,18 +1,17 @@
 import UIKit
 
-class PlayingUserCell: UITableViewCell {
+class SynergyCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var synergyLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
     
-    func update(with user: User?) {
-        nameLabel.text = user?.name ?? "なし"
-        nameLabel.textColor = (user == nil) ? .black : .white
-        backgroundColor = (user == nil) ? .white : .mainColor
+    func update(with timeLine: TimeLine) {
+        let text = timeLine.isSynergyTeam ? "シナジーチーム" : "ディスシナジーチーム"
+        synergyLabel.text = text
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

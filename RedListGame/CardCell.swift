@@ -7,6 +7,13 @@ class CardCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var hintLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        orderLabel.textColor = .mainColor
+        backgroundColor = .white
+    }
+    
     func update(with animal: Animal, index: Int) {
         animalImageView.image = animal.image
         orderLabel.text = String(index + 1)
@@ -15,13 +22,6 @@ class CardCell: UICollectionViewCell {
         
         layer.borderColor = UIColor.lightGray.cgColor
         layer.borderWidth = 1.0
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        orderLabel.textColor = .mainColor
-        backgroundColor = .white
     }
 
 }

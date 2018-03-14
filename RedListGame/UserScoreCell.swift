@@ -1,18 +1,17 @@
 import UIKit
 
-class PlayingUserCell: UITableViewCell {
+class UserScoreCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        showBottomBorder(width: 0.5)
     }
     
-    func update(with user: User?) {
-        nameLabel.text = user?.name ?? "なし"
-        nameLabel.textColor = (user == nil) ? .black : .white
-        backgroundColor = (user == nil) ? .white : .mainColor
+    func update(with user: User) {
+        scoreLabel.text = "\(user.name): \(user.redList?.calculateScore() ?? 0)"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

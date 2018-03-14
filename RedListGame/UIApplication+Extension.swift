@@ -8,7 +8,7 @@ extension UIApplication {
     
     static func setInitialVCWithNC(controller: UIViewController, title: String) {
         let navigationController = UINavigationController(rootViewController: controller)
-        navigationController.navigationBar.isTranslucent = false
+        UINavigationBar.appearance().isTranslucent = false
         controller.title = title
         UIApplication.shared.keyWindow?.rootViewController = navigationController
     }

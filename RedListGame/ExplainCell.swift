@@ -1,18 +1,16 @@
 import UIKit
 
-class PlayingUserCell: UITableViewCell {
+class ExplainCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var explainLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
     
-    func update(with user: User?) {
-        nameLabel.text = user?.name ?? "なし"
-        nameLabel.textColor = (user == nil) ? .black : .white
-        backgroundColor = (user == nil) ? .white : .mainColor
+    func update(with text: String) {
+        explainLabel.attributedText = NSAttributedString.new(text: text, lineHeight: 30.0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

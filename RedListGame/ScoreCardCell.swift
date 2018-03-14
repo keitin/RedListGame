@@ -13,7 +13,7 @@ class ScoreCardCell: UITableViewCell {
     private let numberOfItems: CGFloat = 5.0
     private let borderWidth: CGFloat = 0.5
     private var minCellHight: CGFloat {
-        return ((UIApplication.shared.keyWindow?.frame.height)! - 60.0) / 15.0
+        return ((UIApplication.shared.keyWindow?.frame.height)! - 60.0) / 15.0 - 4.0
     }
     
     override func awakeFromNib() {

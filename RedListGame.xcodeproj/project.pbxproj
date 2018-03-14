@@ -69,6 +69,15 @@
 		327D079E2053948300009A2E /* balaenoptera.png in Resources */ = {isa = PBXBuildFile; fileRef = 327D078F2053948300009A2E /* balaenoptera.png */; };
 		327D07A220566FAD00009A2E /* FinalScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D07A020566FAD00009A2E /* FinalScoreCell.swift */; };
 		327D07A320566FAD00009A2E /* FinalScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D07A120566FAD00009A2E /* FinalScoreCell.xib */; };
+		327D07A72059211200009A2E /* ExplainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D07A52059211200009A2E /* ExplainCell.swift */; };
+		327D07A82059211200009A2E /* ExplainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D07A62059211200009A2E /* ExplainCell.xib */; };
+		327D07AC20592B6600009A2E /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D07AB20592B6600009A2E /* UITableViewCell+Extension.swift */; };
+		327D07AF205960F200009A2E /* UserScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D07AD205960F200009A2E /* UserScoreCell.swift */; };
+		327D07B0205960F200009A2E /* UserScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D07AE205960F200009A2E /* UserScoreCell.xib */; };
+		327D07B42059625B00009A2E /* UsersAverageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D07B22059625B00009A2E /* UsersAverageCell.swift */; };
+		327D07B52059625B00009A2E /* UsersAverageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D07B32059625B00009A2E /* UsersAverageCell.xib */; };
+		327D07B92059652600009A2E /* SynergyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D07B72059652600009A2E /* SynergyCell.swift */; };
+		327D07BA2059652600009A2E /* SynergyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 327D07B82059652600009A2E /* SynergyCell.xib */; };
 		32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6995F20490E3200122F16 /* UIView+Extension.swift */; };
 		32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F6996120490F9000122F16 /* UIViewController+Extension.swift */; };
 		32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F699632049192A00122F16 /* UIStackView+Extension.swift */; };
@@ -164,6 +173,15 @@
 		327D078F2053948300009A2E /* balaenoptera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = balaenoptera.png; sourceTree = "<group>"; };
 		327D07A020566FAD00009A2E /* FinalScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalScoreCell.swift; sourceTree = "<group>"; };
 		327D07A120566FAD00009A2E /* FinalScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinalScoreCell.xib; sourceTree = "<group>"; };
+		327D07A52059211200009A2E /* ExplainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplainCell.swift; sourceTree = "<group>"; };
+		327D07A62059211200009A2E /* ExplainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExplainCell.xib; sourceTree = "<group>"; };
+		327D07AB20592B6600009A2E /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		327D07AD205960F200009A2E /* UserScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserScoreCell.swift; sourceTree = "<group>"; };
+		327D07AE205960F200009A2E /* UserScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserScoreCell.xib; sourceTree = "<group>"; };
+		327D07B22059625B00009A2E /* UsersAverageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAverageCell.swift; sourceTree = "<group>"; };
+		327D07B32059625B00009A2E /* UsersAverageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsersAverageCell.xib; sourceTree = "<group>"; };
+		327D07B72059652600009A2E /* SynergyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynergyCell.swift; sourceTree = "<group>"; };
+		327D07B82059652600009A2E /* SynergyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SynergyCell.xib; sourceTree = "<group>"; };
 		32F6995F20490E3200122F16 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		32F6996120490F9000122F16 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		32F699632049192A00122F16 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
@@ -273,6 +291,7 @@
 				327BB595204929600033216C /* UITableView+Extension.swift */,
 				327BB5C2205247390033216C /* NSAttributedString+Extension.swift */,
 				327BB5CE205261390033216C /* UIColor+Extension.swift */,
+				327D07AB20592B6600009A2E /* UITableViewCell+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -333,9 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				323C31C52047FDE700493C73 /* CardsViewController.swift */,
-				327D07802052742C00009A2E /* PlayingUserCell */,
-				327D077B205270F600009A2E /* RestTime */,
-				323C31F72048395500493C73 /* CardCell */,
+				327D07AA20592A2B00009A2E /* Views */,
 			);
 			name = Cards;
 			sourceTree = "<group>";
@@ -344,10 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				327BB58E204924BF0033216C /* ScoreViewController.swift */,
-				327D07A420566FB000009A2E /* FinalScoreCell */,
-				327D079F20566F5A00009A2E /* ScoreCardCell */,
-				327BB5A0204E35500033216C /* LineChartCell */,
-				327BB5A5204E43690033216C /* PieChart */,
+				327D07BC2059683C00009A2E /* Views */,
 			);
 			name = Score;
 			sourceTree = "<group>";
@@ -490,6 +504,67 @@
 				327D07A120566FAD00009A2E /* FinalScoreCell.xib */,
 			);
 			name = FinalScoreCell;
+			sourceTree = "<group>";
+		};
+		327D07A92059211600009A2E /* ExplainCell */ = {
+			isa = PBXGroup;
+			children = (
+				327D07A52059211200009A2E /* ExplainCell.swift */,
+				327D07A62059211200009A2E /* ExplainCell.xib */,
+			);
+			name = ExplainCell;
+			sourceTree = "<group>";
+		};
+		327D07AA20592A2B00009A2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				327D07A92059211600009A2E /* ExplainCell */,
+				327D07802052742C00009A2E /* PlayingUserCell */,
+				327D077B205270F600009A2E /* RestTime */,
+				323C31F72048395500493C73 /* CardCell */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		327D07B1205960F600009A2E /* UserScoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				327D07AD205960F200009A2E /* UserScoreCell.swift */,
+				327D07AE205960F200009A2E /* UserScoreCell.xib */,
+			);
+			name = UserScoreCell;
+			sourceTree = "<group>";
+		};
+		327D07B62059626200009A2E /* UsersAverageCell */ = {
+			isa = PBXGroup;
+			children = (
+				327D07B22059625B00009A2E /* UsersAverageCell.swift */,
+				327D07B32059625B00009A2E /* UsersAverageCell.xib */,
+			);
+			name = UsersAverageCell;
+			sourceTree = "<group>";
+		};
+		327D07BB2059652A00009A2E /* SynergyCell */ = {
+			isa = PBXGroup;
+			children = (
+				327D07B72059652600009A2E /* SynergyCell.swift */,
+				327D07B82059652600009A2E /* SynergyCell.xib */,
+			);
+			name = SynergyCell;
+			sourceTree = "<group>";
+		};
+		327D07BC2059683C00009A2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				327BB5A5204E43690033216C /* PieChart */,
+				327D07BB2059652A00009A2E /* SynergyCell */,
+				327D07B62059626200009A2E /* UsersAverageCell */,
+				327D07B1205960F600009A2E /* UserScoreCell */,
+				327D07A420566FB000009A2E /* FinalScoreCell */,
+				327D079F20566F5A00009A2E /* ScoreCardCell */,
+				327BB5A0204E35500033216C /* LineChartCell */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		32F6996720491AE000122F16 /* Views */ = {
@@ -659,10 +734,13 @@
 				327D079E2053948300009A2E /* balaenoptera.png in Resources */,
 				327BB5BB205158D40033216C /* SetTimeCell.xib in Resources */,
 				327D079A2053948300009A2E /* choeropsis.png in Resources */,
+				327D07B0205960F200009A2E /* UserScoreCell.xib in Resources */,
 				327D07932053948300009A2E /* panthera.png in Resources */,
 				323C31CE2048019000493C73 /* CardCell.xib in Resources */,
 				327D07912053948300009A2E /* bison.png in Resources */,
 				327D079D2053948300009A2E /* anguilla.png in Resources */,
+				327D07B52059625B00009A2E /* UsersAverageCell.xib in Resources */,
+				327D07A82059211200009A2E /* ExplainCell.xib in Resources */,
 				327D07922053948300009A2E /* macrochelys.png in Resources */,
 				327D07942053948300009A2E /* camelus.png in Resources */,
 				327D07972053948300009A2E /* gorilla.png in Resources */,
@@ -672,6 +750,7 @@
 				327BB5B6205143960033216C /* UserNameCell.xib in Resources */,
 				327D077F205273E700009A2E /* PlayingUserCell.xib in Resources */,
 				323C319B2047F29300493C73 /* Assets.xcassets in Resources */,
+				327D07BA2059652600009A2E /* SynergyCell.xib in Resources */,
 				327D07962053948300009A2E /* pentalagus.png in Resources */,
 				327BB5AC2051372F0033216C /* SetMemberCell.xib in Resources */,
 			);
@@ -840,6 +919,7 @@
 				323C31C62047FDE700493C73 /* CardsViewController.swift in Sources */,
 				32F6996220490F9000122F16 /* UIViewController+Extension.swift in Sources */,
 				327D077E205273E700009A2E /* PlayingUserCell.swift in Sources */,
+				327D07B42059625B00009A2E /* UsersAverageCell.swift in Sources */,
 				327BB5BF205161EE0033216C /* StartGameCell.swift in Sources */,
 				323C31F120481AD700493C73 /* RedList.swift in Sources */,
 				323C31D0204801C500493C73 /* UICollectionView+Extension.swift in Sources */,
@@ -853,6 +933,7 @@
 				32F699642049192A00122F16 /* UIStackView+Extension.swift in Sources */,
 				327BB5C62052509C0033216C /* AnimalCell.swift in Sources */,
 				327BB5AB2051372F0033216C /* SetMemberCell.swift in Sources */,
+				327D07AF205960F200009A2E /* UserScoreCell.swift in Sources */,
 				327BB58F204924BF0033216C /* ScoreViewController.swift in Sources */,
 				327BB5BA205158D40033216C /* SetTimeCell.swift in Sources */,
 				323C31C82047FF0900493C73 /* UIApplication+Extension.swift in Sources */,
@@ -863,8 +944,11 @@
 				327BB593204927E90033216C /* ScoreCardCell.swift in Sources */,
 				323C31942047F29300493C73 /* AppDelegate.swift in Sources */,
 				323C31FB20483D8A00493C73 /* Participants.swift in Sources */,
+				327D07B92059652600009A2E /* SynergyCell.swift in Sources */,
 				327BB598204965000033216C /* Operation.swift in Sources */,
+				327D07AC20592B6600009A2E /* UITableViewCell+Extension.swift in Sources */,
 				32F6996020490E3200122F16 /* UIView+Extension.swift in Sources */,
+				327D07A72059211200009A2E /* ExplainCell.swift in Sources */,
 				323C31CD2048019000493C73 /* CardCell.swift in Sources */,
 				327BB596204929600033216C /* UITableView+Extension.swift in Sources */,
 			);

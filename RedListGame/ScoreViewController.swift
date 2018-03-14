@@ -14,7 +14,10 @@ class ScoreViewController: UIViewController {
     
     fileprivate enum RightSection: Int {
         case finalScore
-        static let count = 1
+        case synergy
+        case usersAverage
+        case userScore
+        static let count = 4
     }
     
     let leftTableView = UITableView()
@@ -54,6 +57,9 @@ class ScoreViewController: UIViewController {
         rightTableView.widthEqualTo(constant: view.frame.width * 1 / 3 )
         rightTableView.tag = rightTableViewTag
         rightTableView.register(type: FinalScoreCell.self)
+        rightTableView.register(type: SynergyCell.self)
+        rightTableView.register(type: UsersAverageCell.self)
+        rightTableView.register(type: UserScoreCell.self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +109,12 @@ extension ScoreViewController: UITableViewDataSource {
             switch section {
             case .finalScore:
                 return 1
+            case .synergy:
+                return 1
+            case .usersAverage:
+                return 1
+            case .userScore:
+                return timeLine.users.count
             }
         }
     }
@@ -136,6 +148,18 @@ extension ScoreViewController: UITableViewDataSource {
                 let cell: FinalScoreCell = tableView.dequeueCell(indexPath: indexPath)
                 cell.update(with: timeLine)
                 return cell
+            case .synergy:
+                let cell: SynergyCell = tableView.dequeueCell(indexPath: indexPath)
+                cell.update(with: timeLine)
+                return cell
+            case .usersAverage:
+                let cell: UsersAverageCell = tableView.dequeueCell(indexPath: indexPath)
+                cell.update(with: timeLine)
+                return cell
+            case .userScore:
+                let cell: UserScoreCell = tableView.dequeueCell(indexPath: indexPath)
+                cell.update(with: timeLine.users[indexPath.row])
+                return cell
             }
         }
     }
@@ -146,12 +170,12 @@ extension ScoreViewController: UITableViewDataSource {
                 fatalError("Invalid section")
             }
             switch section {
+            case .scoreCard:
+                return "正解順位"
             case .lineChart:
                 return "スコアの推移"
             case .pieChart:
                 return "発言率"
-            default:
-                return nil
             }
         } else {
             guard let section = RightSection.init(rawValue: section) else {
@@ -160,6 +184,12 @@ extension ScoreViewController: UITableViewDataSource {
             switch section {
             case .finalScore:
                 return "あなたのスコア"
+            case .synergy:
+                return "あなたのチーム"
+            case .usersAverage:
+                return "チームの個人平均"
+            case .userScore:
+                return "個人のスコア"
             }
         }
     }

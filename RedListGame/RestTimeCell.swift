@@ -6,6 +6,7 @@ class RestTimeCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
     }
     
     func update(with time: Int) {
